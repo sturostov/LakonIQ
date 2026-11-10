@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LakonIQ — подсказчик для собеседований на macOS</title>
+<meta name="description" content="LakonIQ слушает созвон, понимает, где вопрос интервьюера, и через секунду показывает, что ответить. Бесплатно, открытый код, данные на твоём Mac.">
+<meta name="theme-color" content="#070b1f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LakonIQ — подсказчик для собеседований на macOS">
+<meta property="og:description" content="Слышит вопрос интервьюера — через секунду показывает, что ответить. Бесплатно и с открытым кодом.">
+<meta property="og:image" content="https://raw.githubusercontent.com/sturostov/LakonIQ/main/docs/assets/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero.webp">
+<style>
+  :root {
+    --bg: #070b1f; --bg-2: #0a1240; --navy: #0b1a6b;
+    --blue: #3c83f6; --blue-2: #5b9bff; --blue-soft: rgba(60, 131, 246, .14);
+    --text: #f4f4f5; --muted: #a1a1aa; --faint: #71717a;
+    --card: rgba(255, 255, 255, .045); --card-2: rgba(255, 255, 255, .07); --line: rgba(255, 255, 255, .09);
+    --good: #34d399;
+    --radius: 18px;
+    --max: 1120px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; letter-spacing: -.005em;
+  }
+  a { color: var(--blue-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; height: auto; display: block; }
+  kbd { font: 600 .82em/1 -apple-system, sans-serif; padding: .28em .5em; border-radius: 6px; background: var(--card-2);
+        border: 1px solid var(--line); border-bottom-width: 2px; color: var(--text); }
+  code { font: .88em ui-monospace, "SF Mono", Menlo, monospace; background: var(--card-2); padding: .15em .45em; border-radius: 6px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .glow { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .glow::before, .glow::after { content: ""; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; }
+  .glow::before { width: 720px; height: 520px; left: -160px; top: -200px; background: #2448e6; }
+  .glow::after { width: 620px; height: 520px; right: -200px; top: 120px; background: #1c38ea; opacity: .35; }
+
+  /* навигация */
+  nav { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(160%) blur(16px); -webkit-backdrop-filter: saturate(160%) blur(16px);
+        background: rgba(7, 11, 31, .72); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; gap: 28px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; font-size: 19px; letter-spacing: -.02em; }
+  .brand:hover { text-decoration: none; }
+  .brand img { width: 30px; height: 30px; }
+  .brand .wm span { color: var(--blue-2); }
+  .links { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
+  .links a { color: var(--muted); }
+  .links a:hover { color: var(--text); text-decoration: none; }
+
+  /* кнопки */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; font-weight: 600; font-size: 17px;
+         color: #fff; background: linear-gradient(180deg, #5b9bff, #3c83f6 55%, #2f6fe0); border: 1px solid rgba(255, 255, 255, .18);
+         box-shadow: 0 10px 30px rgba(60, 131, 246, .35), inset 0 1px 0 rgba(255, 255, 255, .25); transition: transform .15s, box-shadow .15s; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 14px 38px rgba(60, 131, 246, .45), inset 0 1px 0 rgba(255, 255, 255, .25); }
+  .btn svg { width: 20px; height: 20px; }
+  .btn.ghost { background: var(--card); box-shadow: none; border-color: var(--line); color: var(--text); }
+  .btn.ghost:hover { background: var(--card-2); }
+  .btn.small { padding: 8px 16px; font-size: 14px; box-shadow: none; }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 3px; }
+
+  /* первый экран */
+  header.hero { position: relative; text-align: center; padding: 76px 0 40px; }
+  .pill { display: inline-flex; gap: 8px; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: 14px; color: #c7d2fe;
+          background: var(--blue-soft); border: 1px solid rgba(91, 155, 255, .28); }
+  .pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px rgba(52, 211, 153, .18); }
+  h1 { font-size: clamp(36px, 5.6vw, 66px); line-height: 1.05; letter-spacing: -.04em; margin: 22px auto 0; max-width: 1040px; font-weight: 750; text-wrap: balance; }
+  h1 em { font-style: normal; background: linear-gradient(90deg, #8fb8ff, #3c83f6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { font-size: clamp(18px, 2.1vw, 21px); color: #c4c9d6; max-width: 700px; margin: 22px auto 0; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+  .meta { margin-top: 16px; font-size: 14px; color: var(--muted); }
+  .meta b { color: var(--text); font-weight: 600; }
+  .not-mac-note { display: none; margin: 14px auto 0; max-width: 520px; font-size: 14px; color: #fbbf24; }
+  .not-mac .not-mac-note { display: block; }
+  .shot-hero { position: relative; margin: 54px auto 0; max-width: 1080px; border-radius: 20px; overflow: hidden;
+               box-shadow: 0 40px 120px rgba(0, 0, 0, .6), 0 0 0 1px var(--line); }
+
+  /* цифры */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 46px auto 0; }
+  .stat { padding: 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); text-align: left; }
+  .stat b { display: block; font-size: 26px; letter-spacing: -.03em; }
+  .stat span { color: var(--muted); font-size: 15px; }
+
+  section { padding: 96px 0 0; position: relative; }
+  .eyebrow { color: var(--blue-2); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; letter-spacing: -.035em; margin: 10px 0 0; font-weight: 720; }
+  .sub { color: #c4c9d6; max-width: 680px; margin: 16px 0 0; font-size: 18px; }
+  .center { text-align: center; } .center .sub { margin-left: auto; margin-right: auto; }
+
+  /* демо */
+  .demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; margin-top: 44px; }
+  .demo .frame { border-radius: 20px; overflow: hidden; background: #0a1030; box-shadow: 0 30px 90px rgba(0, 0, 0, .55), 0 0 0 1px var(--line); }
+  .demo .caption { font-size: 14px; color: var(--faint); margin-top: 12px; text-align: center; }
+  .flow { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; }
+  .flow li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  .flow .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--card-2); border: 1px solid var(--line); font-size: 20px; }
+  .flow b { display: block; }
+  .flow span { color: var(--muted); font-size: 16px; }
+
+  /* возможности */
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 44px; }
+  .feat { display: flex; flex-direction: column; border-radius: 22px; background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02)); border: 1px solid var(--line); overflow: hidden; }
+  .feat .img { flex: 1; display: flex; align-items: flex-end; padding: 22px 22px 0; background: radial-gradient(90% 70% at 50% 0%, rgba(60, 131, 246, .22), transparent 70%); }
+  .feat .img img { border-radius: 12px 12px 0 0; box-shadow: 0 -1px 0 var(--line); }
+  .feat .txt { padding: 22px 26px 26px; border-top: 1px solid var(--line); }
+  .feat h3 { margin: 0; font-size: 21px; letter-spacing: -.02em; }
+  .feat p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+  .cols3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 22px; }
+  .col { padding: 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); }
+  .col h3 { margin: 0 0 12px; font-size: 19px; }
+  .col ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15.5px; display: grid; gap: 8px; }
+
+  /* шаги */
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 44px; counter-reset: s; }
+  .step { position: relative; padding: 30px 26px 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); }
+  .step::before { counter-increment: s; content: counter(s); position: absolute; top: -18px; left: 24px; width: 38px; height: 38px; border-radius: 12px;
+                  display: grid; place-items: center; font-weight: 700; background: linear-gradient(180deg, #5b9bff, #2f6fe0); box-shadow: 0 8px 24px rgba(60, 131, 246, .4); }
+  .step h3 { margin: 6px 0 8px; font-size: 20px; }
+  .step p { margin: 0; color: var(--muted); font-size: 16px; }
+  .note { margin-top: 22px; padding: 18px 22px; border-radius: 16px; background: rgba(251, 191, 36, .07); border: 1px solid rgba(251, 191, 36, .22); color: #e7d3a1; font-size: 15.5px; }
+  .note b { color: #fde68a; }
+
+  /* приватность */
+  .priv { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 44px; }
+  .priv div { padding: 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--line); }
+  .priv b { display: block; font-size: 18px; margin-bottom: 8px; }
+  .priv span { color: var(--muted); font-size: 15.5px; }
+
+  /* вопросы */
+  .faq { max-width: 820px; margin: 40px auto 0; display: grid; gap: 12px; }
+  details { border-radius: 16px; background: var(--card); border: 1px solid var(--line); padding: 0 22px; }
+  details[open] { background: var(--card-2); }
+  summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 22px; line-height: 1; transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 18px; color: #c4c9d6; font-size: 16px; }
+
+  /* финал */
+  .final { margin: 110px auto 0; padding: 64px 24px; border-radius: 28px; text-align: center; position: relative; overflow: hidden;
+           background: radial-gradient(80% 120% at 50% 0%, rgba(60, 131, 246, .45), rgba(11, 26, 107, .5) 60%, rgba(7, 11, 31, .2));
+           border: 1px solid rgba(91, 155, 255, .25); }
+  .final img.logo { width: 76px; height: 76px; margin: 0 auto 18px; filter: drop-shadow(0 12px 30px rgba(32, 51, 220, .6)); }
+  footer { padding: 56px 0 48px; color: var(--faint); font-size: 14px; }
+  footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 900px) {
+    .links { display: none; }
+    nav .btn.small { margin-left: auto; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .demo, .grid2, .cols3, .steps, .priv { grid-template-columns: 1fr; }
+    .demo { gap: 32px; }
+    .steps { gap: 34px; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    header.hero { padding-top: 48px; }
+    .stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .stat { padding: 16px; }
+    .stat b { font-size: 21px; }
+    .btn:not(.small) { width: 100%; justify-content: center; }
+    .shot-hero { border-radius: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="favicon.svg" alt=""><span class="wm">Lakon<span>IQ</span></span></a>
+    <div class="links">
+      <a href="#how">Как работает</a>
+      <a href="#features">Возможности</a>
+      <a href="#start">Как начать</a>
+      <a href="#faq">Вопросы</a>
+      <a href="https://github.com/sturostov/LakonIQ">GitHub</a>
+    </div>
+    <a class="btn small" href="https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg">Скачать</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap" style="position: relative">
+    <span class="pill"><i></i>Бесплатно · открытый код · macOS</span>
+    <h1>Ответ на вопрос интервьюера&nbsp;— <em>через секунду</em></h1>
+    <p class="lead">LakonIQ слушает созвон, понимает, где прозвучал вопрос, и показывает, что сказать: со шпаргалкой, примером и кодом. Работает поверх любого созвона, на бесплатных моделях.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+        Скачать для Mac
+      </a>
+      <a class="btn ghost" href="https://github.com/sturostov/LakonIQ">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        Исходный код
+      </a>
+    </div>
+    <p class="meta">Версия <b data-version>1.0.0</b> · Apple Silicon · macOS 13+ · <span data-size>37 МБ</span></p>
+    <p class="not-mac-note">LakonIQ работает на Mac. Открой эту страницу на компьютере Mac, чтобы скачать приложение.</p>
+    <div class="shot-hero"><img src="assets/hero.webp" width="2000" height="1250" alt="Окно LakonIQ поверх видеозвонка: вопрос интервьюера в расшифровке и готовый ответ — что сказать, шпаргалка-таблица и пример кода"></div>
+    <div class="stats">
+      <div class="stat"><b>~1 секунда</b><span>от вопроса до первых слов ответа</span></div>
+      <div class="stat"><b>0 ₽</b><span>на бесплатных Groq, Gemini и OpenRouter</span></div>
+      <div class="stat"><b>443 вопроса</b><span>QA с собеседований — банк с мгновенными ответами</span></div>
+      <div class="stat"><b>Только у тебя</b><span>база, ключи и резюме хранятся на твоём Mac</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <div class="demo">
+      <div>
+        <div class="frame"><img src="assets/demo.gif" width="768" height="974" loading="lazy" alt="Анимация: вопрос из банка получает ответ сразу, на вопрос про PUT и PATCH ответ начинает печататься через секунду"></div>
+        <p class="caption">Запись в реальном времени. Ответы Claude, резюме в демо вымышленное.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Как это работает</div>
+        <h2>Ты слушаешь собеседника — LakonIQ готовит ответ</h2>
+        <ul class="flow">
+          <li><div class="ico">🎧</div><div><b>Слышит созвон</b><span>Звук берётся прямо из системы — любые наушники, без BlackHole и настройки звука.</span></div></li>
+          <li><div class="ico">❓</div><div><b>Понимает, где вопрос</b><span>Приветствия, «угу» и рассказ о компании уходят в контекст. Отвечает только на вопросы и задания.</span></div></li>
+          <li><div class="ico">⚡</div><div><b>Отвечает за секунду</b><span>Сначала «Скажи» — что произнести своими словами. Потом шпаргалка, пример задачи или код.</span></div></li>
+          <li><div class="ico">🧠</div><div><b>Помнит, о чём говорили</b><span>Учитывает резюме, вакансию и весь разговор. Пропустил вопрос — <kbd>⌘</kbd> <kbd>↵</kbd>.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Возможности</div>
+      <h2>Ответ под тип вопроса, а не простыня текста</h2>
+      <p class="sub">Тест-дизайн, API, SQL, автотесты, теория или опыт — формат ответа выбирается мгновенно, без лишнего запроса к ИИ.</p>
+    </div>
+    <div class="grid2">
+      <div class="feat">
+        <div class="img"><img src="assets/testdesign.webp" width="1000" height="1092" loading="lazy" alt="Таблица проверок поля «Возраст» от 18 до 65"></div>
+        <div class="txt"><h3>Тест-дизайн — таблица проверок</h3><p>Классы эквивалентности, границы и негативные случаи — без лишнего кода. Для API, SQL и автотестов — пример в коде.</p></div>
+      </div>
+      <div class="feat">
+        <div class="img"><img src="assets/bank.webp" width="1000" height="1092" loading="lazy" alt="Мгновенный ответ из банка на вопрос о регрессионном тестировании"></div>
+        <div class="txt"><h3>Банк из 443 вопросов QA</h3><p>Вопрос из банка — ответ появляется мгновенно, без запроса к модели. Ответы собираются у тебя бесплатно из открытых статей.</p></div>
+      </div>
+      <div class="feat">
+        <div class="img"><img src="assets/login.webp" width="1000" height="851" loading="lazy" alt="Экран входа: Google, OpenRouter, Groq или Claude"></div>
+        <div class="txt"><h3>Вход за минуту — бесплатно</h3><p>Google, OpenRouter или Groq: откроется страница сервиса, ключ подхватится сам. Есть Claude и локальная Ollama.</p></div>
+      </div>
+      <div class="feat">
+        <div class="img"><img src="assets/study.webp" width="1000" height="1031" loading="lazy" alt="Режим заучивания с оценками «Не помню», «С трудом», «Помню»"></div>
+        <div class="txt"><h3>Заучивание после собеседования</h3><p>Отмечай ответы ★ — они вернутся карточками по системе Лейтнера. К следующему интервью они уже в голове.</p></div>
+      </div>
+    </div>
+    <div class="cols3">
+      <div class="col"><h3>Во время созвона</h3><ul>
+        <li>Расшифровка на русском или английском</li>
+        <li>Склеивает дозаданные вопросы</li>
+        <li>«Задача с экрана» — решение по скриншоту</li>
+        <li>Уточняющие вопросы интервьюеру</li></ul></div>
+      <div class="col"><h3>В каждом ответе</h3><ul>
+        <li>«Скажи» — живая речь, не зубрёжка</li>
+        <li>Шпаргалка-таблица для сравнений</li>
+        <li>«Подробнее» и «Проще» в один клик</li>
+        <li>Опыт — только из твоего резюме</li></ul></div>
+      <div class="col"><h3>После собеседования</h3><ul>
+        <li>Разбор: где ответы были слабые</li>
+        <li>База ответов с заметками и тегами</li>
+        <li>Экспорт в Markdown</li>
+        <li>Карточки для повторения</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Как начать</div>
+      <h2>Три шага — и можно на собеседование</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Скачай и установи</h3><p>Открой <b>LakonIQ.dmg</b> и перетащи приложение в «Программы».</p></div>
+      <div class="step"><h3>Разреши запуск</h3><p>Первый раз macOS не даст открыть приложение: Системные настройки → Конфиденциальность и безопасность → <b>«Всё равно открыть»</b>. Затем выдай «Запись экрана и системного звука» и «Универсальный доступ».</p></div>
+      <div class="step"><h3>Войди и слушай</h3><p>Войди через Groq, Google или OpenRouter — бесплатно. Надень наушники, открой созвон и нажми «Слушать» <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>L</kbd>.</p></div>
+    </div>
+    <p class="note"><b>Почему macOS предупреждает?</b> У проекта пока нет платной подписи Apple Developer ($99 в год), поэтому macOS не может проверить разработчика. Приложение собрано из <a href="https://github.com/sturostov/LakonIQ">открытого кода</a> — его можно проверить или собрать самому одной командой.</p>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Конфиденциальность</div>
+      <h2>Твои данные остаются у тебя</h2>
+    </div>
+    <div class="priv">
+      <div><b>🔒 Всё на твоём Mac</b><span>База ответов, ключи API, резюме и логи хранятся локально. Аккаунта LakonIQ нет — регистрироваться не нужно.</span></div>
+      <div><b>📤 Наружу — только нужное</b><span>Звук фраз — сервису распознавания, вопрос и контекст — выбранной модели. Снимок экрана — только по твоей команде. С Ollama модель работает прямо на Mac.</span></div>
+      <div><b>🛡 Закрыт от сайтов</b><span>Локальный сервер принимает команды только из окна приложения: открытые в браузере страницы не видят расшифровку.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Вопросы и ответы</div>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Сколько это стоит?</summary><p>Приложение бесплатное. Модели — тоже можно бесплатно: Groq, Gemini и бесплатные модели OpenRouter. Claude платный, по тарифам API. Распознавание речи бесплатно через Groq; Deepgram быстрее и даёт $200 при регистрации.</p></details>
+      <details><summary>Почему macOS не даёт открыть приложение с первого раза?</summary><p>У проекта нет платной подписи Apple Developer, поэтому macOS не может проверить разработчика. Открой Системные настройки → Конфиденциальность и безопасность и нажми «Всё равно открыть» — это нужно один раз. На macOS 13–14 можно и так: правый клик по LakonIQ в «Программах» → «Открыть».</p></details>
+      <details><summary>Видно ли окно при демонстрации экрана?</summary><p>Да. LakonIQ — обычное окно поверх остальных: оно не прячется от демонстрации экрана, записи и прокторинга.</p></details>
+      <details><summary>У меня Mac на Intel</summary><p>Готовая сборка — для Apple Silicon (M1 и новее). На Intel приложение собирается из исходников одной командой: <code>./build_mac.sh --install</code> — инструкция <a href="https://github.com/sturostov/LakonIQ#install">на GitHub</a>.</p></details>
+      <details><summary>Нужен ли BlackHole или настройка звука?</summary><p>Нет. Звук созвона берётся из системы через ScreenCaptureKit — подойдут любые наушники, AirPods или проводные.</p></details>
+      <details><summary>Только для QA?</summary><p>Нет: роль, резюме и вакансия задаются в настройках, и ответы подстраиваются под них. Для QA и Automation QA на Python есть готовый банк из 443 вопросов.</p></details>
+      <details><summary>Какие данные уходят наружу?</summary><p>Только то, что нужно для ответа, и только выбранным тобой сервисам: звук фраз — сервису распознавания (Groq или Deepgram), вопрос, контекст разговора и резюме — выбранной модели, снимок экрана — когда ты сам просишь подсказку или решение задачи с экрана.</p></details>
+    </div>
+
+    <div class="final">
+      <img class="logo" src="favicon.svg" alt="">
+      <h2>Готов к следующему собеседованию?</h2>
+      <p class="sub" style="margin: 14px auto 0">Бесплатно, без регистрации, с открытым кодом.</p>
+      <div class="cta">
+        <a class="btn" href="https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+          Скачать для Mac
+        </a>
+      </div>
+      <p class="meta">Версия <b data-version>1.0.0</b> · Apple Silicon · macOS 13+</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LakonIQ contributors · лицензия MIT</span>
+    <span><a href="https://github.com/sturostov/LakonIQ">GitHub</a> · <a href="https://github.com/sturostov/LakonIQ/releases">Все версии</a> · <a href="https://github.com/sturostov/LakonIQ/issues">Сообщить о проблеме</a></span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var ua = navigator.userAgent || "";
+    var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || ua;
+    var isMac = /mac/i.test(plat) && !/iphone|ipad|ipod/i.test(ua) && !(navigator.maxTouchPoints > 1);
+    if (!isMac) document.documentElement.classList.add("not-mac");
+    fetch("https://api.github.com/repos/sturostov/LakonIQ/releases/latest")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel || !rel.tag_name) return;
+        var v = rel.tag_name.replace(/^v/, "");
+        document.querySelectorAll("[data-version]").forEach(function (e) { e.textContent = v; });
+        var dmg = (rel.assets || []).filter(function (a) { return /\.dmg$/.test(a.name); })[0];
+        if (dmg) document.querySelectorAll("[data-size]").forEach(function (e) { e.textContent = Math.round(dmg.size / 1048576) + " МБ"; });
+      })
+      .catch(function () {});
+  })();
+</script>
+</body>
+</html>
