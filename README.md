@@ -10,10 +10,11 @@
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-111111?style=flat-square&logo=apple&logoColor=white)](#install)
 [![Apple Silicon | Intel](https://img.shields.io/badge/Apple%20Silicon%20%7C%20Intel-3c83f6?style=flat-square)](#install)
 [![Python 3.10–3.13](https://img.shields.io/badge/Python-3.10%E2%80%933.13-3776ab?style=flat-square&logo=python&logoColor=white)](#install)
+[![Release](https://img.shields.io/github/v/release/sturostov/LakonIQ?style=flat-square&color=3c83f6)](https://github.com/sturostov/LakonIQ/releases/latest)
 [![License: MIT](https://img.shields.io/github/license/sturostov/LakonIQ?style=flat-square&color=22c55e)](LICENSE)
 [![AI: Groq · Gemini · Claude · Ollama](https://img.shields.io/badge/AI-Groq%20%C2%B7%20Gemini%20%C2%B7%20Claude%20%C2%B7%20Ollama-8b5cf6?style=flat-square)](#install)
 
-[**Установить**](#install) · [Возможности](#features) · [Как это работает](#how) · [Вопросы и ответы](#faq)
+[**⬇ Скачать для Mac**](https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg) · [Сайт](https://sturostov.github.io/LakonIQ/) · [Возможности](#features) · [Как это работает](#how) · [Вопросы и ответы](#faq)
 
 <img src="docs/assets/hero.webp" width="100%" alt="LakonIQ поверх видеозвонка: вопрос интервьюера в расшифровке и готовый ответ — что сказать, шпаргалка-таблица и пример кода">
 
@@ -88,8 +89,14 @@
 <a id="install"></a>
 ## 🚀 Установка
 
-Нужно: Mac на Apple Silicon или Intel с macOS 13+, Python 3.10–3.13 (`brew install python@3.13`) и инструменты
-разработчика Xcode (`xcode-select --install`).
+**Готовое приложение** — для Mac на Apple Silicon (M1 и новее), macOS 13+:
+
+1. Скачай [**LakonIQ.dmg**](https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg) и перетащи LakonIQ в «Программы».
+2. Первый запуск: macOS не даст открыть приложение — у проекта нет платной подписи Apple Developer. Открой
+   Системные настройки → Конфиденциальность и безопасность → **«Всё равно открыть»**. Это нужно один раз.
+
+**Из исходников** — для Apple Silicon и Intel. Нужны Python 3.10–3.13 (`brew install python@3.13`) и инструменты
+разработчика Xcode (`xcode-select --install`):
 
 ```bash
 git clone https://github.com/sturostov/LakonIQ.git
@@ -98,8 +105,8 @@ cd LakonIQ
 ```
 
 Скрипт сам создаст окружение, поставит зависимости, соберёт `LakonIQ.app`, положит его в «Программы» и запустит —
-около минуты. Без `--install` получится только образ `dist/LakonIQ.dmg`. Приложение собирается на твоём Mac,
-поэтому macOS не блокирует его как скачанное из интернета.
+около минуты. Без `--install` получится только образ `dist/LakonIQ.dmg`. Собранное на твоём Mac приложение
+macOS открывает без предупреждений.
 
 ### Первый запуск
 
