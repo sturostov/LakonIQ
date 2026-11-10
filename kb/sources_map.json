@@ -1,0 +1,2887 @@
+{
+ "q80b47658b958": {
+  "q": "Назовите принципы тестирования.",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Принципы тестирования",
+    "path": "obshee/principy-testirovaniya.md"
+   }
+  ]
+ },
+ "qaed8eff154ab": {
+  "q": "Какие модели разработки ПО вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Модели разработки ПО",
+    "path": "sdlc-i-stlc/modeli-razrabotki-po.md"
+   }
+  ]
+ },
+ "qc95bac7c1f9c": {
+  "q": "Как выбрать тест-кейсы для регрессионного тестирования?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как выбрать тест-кейсы для регрессионного тестирования",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-vybrat-test-keisy-dlya-regressionnogo-testirovaniya.md"
+   }
+  ]
+ },
+ "q95558c46dd3f": {
+  "q": "Что такое исследовательское тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое исследовательское тестирование?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-issledovatelskoe-testirovanie.md"
+   }
+  ]
+ },
+ "qcd38b167384f": {
+  "q": "Что такое A/B-тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое A/B тестирование?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-a-b-testirovanie.md"
+   }
+  ]
+ },
+ "qeaf536ed5f8a": {
+  "q": "Что такое мутационное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Мутационное тестирование",
+    "path": "avtomatizaciya-testirovaniya/mutacionnoe-testirovanie-mutation-testing.md"
+   }
+  ]
+ },
+ "q4313899cf494": {
+  "q": "Какие бывают виды интеграционного тестирования?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие бывают виды интеграционного тестирования?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakie-byvayut-vidy-integracionnogo-testirovaniya.md"
+   }
+  ]
+ },
+ "q29f7a5503bf2": {
+  "q": "Какие техники тест-дизайна вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Техники тест-дизайна",
+    "path": "teoriya-ruchnogo-testirovaniya/tekhniki-test-dizaina.md"
+   }
+  ]
+ },
+ "q9b2ec860aa79": {
+  "q": "Какие виды тестовой документации вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Виды тестовой документации",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/vidy-testovoi-dokumentacii.md"
+   }
+  ]
+ },
+ "qf1fc4b2d6714": {
+  "q": "Как определить приоритет и серьёзность бага?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как определить приоритет и серьёзность бага",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-opredelit-prioritet-i-seryoznost-baga.md"
+   }
+  ]
+ },
+ "qb9a731ce8b27": {
+  "q": "Что такое клиент-серверная архитектура?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое клиент-серверная архитектура?",
+    "path": "web/chto-takoe-klient-servernaya-arkhitektura.md"
+   }
+  ]
+ },
+ "q9b39762ebd1a": {
+  "q": "Какие HTTP-методы вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие есть HTTP-методы?",
+    "path": "web/kakie-est-http-metody.md"
+   }
+  ]
+ },
+ "q81c4e00fb6a1": {
+  "q": "Что такое GraphQL?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое GraphQL?",
+    "path": "web/chto-takoe-graphql.md"
+   }
+  ]
+ },
+ "qd13d0c31eaf2": {
+  "q": "Что такое gRPC?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое gRPC?",
+    "path": "web/chto-takoe-grpc.md"
+   }
+  ]
+ },
+ "q58410404c470": {
+  "q": "Какие виды авторизации вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Виды авторизации",
+    "path": "web/vidy-avtorizacii.md"
+   }
+  ]
+ },
+ "q9bc85e29afd8": {
+  "q": "Что такое cookies и зачем они нужны?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Зачем нужны cookies?",
+    "path": "web/zachem-nuzhny-cookies.md"
+   }
+  ]
+ },
+ "q6a0e6d14311b": {
+  "q": "Что такое сессия?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое сессия?",
+    "path": "web/chto-takoe-sessiya.md"
+   }
+  ]
+ },
+ "q28d5ca2c6ada": {
+  "q": "Что такое CORS?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "CORS",
+    "path": "web/cors.md"
+   }
+  ]
+ },
+ "q401c6122a061": {
+  "q": "Как протестировать адаптивную вёрстку?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как протестировать адаптивную верстку?",
+    "path": "web/kak-protestirovat-adaptivnuyu-verstku.md"
+   }
+  ]
+ },
+ "qff513e8cace0": {
+  "q": "Чем отличаются DELETE, TRUNCATE и DROP?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Чем отличаются delete, drop, truncate?",
+    "path": "bazy-dannykh/chem-otlichayutsya-delete-drop-truncate.md"
+   }
+  ]
+ },
+ "q73ea43512cc7": {
+  "q": "Что такое хранимые процедуры и триггеры?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Хранимые процедуры и триггеры",
+    "path": "bazy-dannykh/khranimye-procedury-i-triggery.md"
+   }
+  ]
+ },
+ "q3c38a28e1a50": {
+  "q": "Что такое оконные функции?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Оконные функции",
+    "path": "bazy-dannykh/okonnye-funkcii.md"
+   }
+  ]
+ },
+ "qba09eec0d986": {
+  "q": "Что такое *args и **kwargs?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое *args, **kwargs?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-args-kwargs.md"
+   }
+  ]
+ },
+ "qdb797c9f1a38": {
+  "q": "Что такое декоратор? Приведите пример.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое декораторы?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-dekoratory.md"
+   }
+  ]
+ },
+ "q4832a2d07669": {
+  "q": "Что такое замыкание?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Замыкание",
+    "path": "osnovy-programmirovaniya-na-python/zamykanie.md"
+   }
+  ]
+ },
+ "q83a13ec59928": {
+  "q": "Что такое ООП? Назовите его принципы.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "ООП и его принципы",
+    "path": "osnovy-programmirovaniya-na-python/oop-i-ego-principy.md"
+   }
+  ]
+ },
+ "qf02f23101cdc": {
+  "q": "Что такое полиморфизм? Приведите пример.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Примеры полиморфизма",
+    "path": "osnovy-programmirovaniya-na-python/primery-polimorfizma.md"
+   }
+  ]
+ },
+ "q3c072ae2a252": {
+  "q": "Что такое self?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "self",
+    "path": "osnovy-programmirovaniya-na-python/self.md"
+   }
+  ]
+ },
+ "q74eebc00a73e": {
+  "q": "Что такое super()?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "super()",
+    "path": "osnovy-programmirovaniya-na-python/super.md"
+   }
+  ]
+ },
+ "qd7ca3719b852": {
+  "q": "Что такое срезы?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое срез?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-srez.md"
+   }
+  ]
+ },
+ "q90ddb808fdac": {
+  "q": "Что такое f-строки?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "f-строки",
+    "path": "osnovy-programmirovaniya-na-python/f-stroki.md"
+   }
+  ]
+ },
+ "qedd6b2dc9bc1": {
+  "q": "Что есть в модуле collections?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Модуль collections",
+    "path": "osnovy-programmirovaniya-na-python/modul-collections.md"
+   }
+  ]
+ },
+ "q763d13bf35b8": {
+  "q": "Что такое SOLID?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "SOLID",
+    "path": "osnovy-programmirovaniya-na-python/solid.md"
+   }
+  ]
+ },
+ "q850cb31a3b5e": {
+  "q": "Что такое рекурсия?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое рекурсия?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-rekursiya.md"
+   }
+  ]
+ },
+ "q17dc59383f96": {
+  "q": "Что такое Expected Conditions?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Expected conditions",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/expected-conditions.md"
+   }
+  ]
+ },
+ "q7e438aa73752": {
+  "q": "Что такое визуальное регрессионное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Визуальное регрессионное тестирование",
+    "path": "avtomatizaciya-testirovaniya/vizualnoe-regressionnoe-testirovanie.md"
+   }
+  ]
+ },
+ "q1693fdd1f6c9": {
+  "q": "Чем отличаются merge и rebase?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Разница rebase и merge",
+    "path": "git/raznica-rebase-i-merge.md"
+   }
+  ]
+ },
+ "qc222e5e7b3cc": {
+  "q": "Что такое pull request?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Pull Requests?",
+    "path": "git/chto-takoe-pull-requests.md"
+   }
+  ]
+ },
+ "qe1add752422b": {
+  "q": "Что такое cherry-pick?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Cherry-pick?",
+    "path": "git/chto-takoe-cherry-pick.md"
+   }
+  ]
+ },
+ "q7888130d3543": {
+  "q": "Что такое Git Flow?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Git Flow",
+    "path": "git/git-flow.md"
+   }
+  ]
+ },
+ "q144b4ee2c66c": {
+  "q": "Что такое Dockerfile и docker-compose?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Dockerfile и docker compose",
+    "path": "ci/dockerfile-i-docker-compose.md"
+   }
+  ]
+ },
+ "q060e26efb361": {
+  "q": "Какие типы мобильных приложений бывают?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Назовите типы мобильных приложений",
+    "path": "mobile/nazovite-tipy-mobilnykh-prilozhenii.md"
+   }
+  ]
+ },
+ "q9a0b22049245": {
+  "q": "Как тестировать push-уведомления?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование push-уведомлений",
+    "path": "mobilnoe-testirovanie/testirovanie-push-uvedomlenii.md"
+   }
+  ]
+ },
+ "q430fa1f7dcf4": {
+  "q": "Как протестировать процесс оплаты в интернет-магазине?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как протестировать процесс оплаты в интернет-магазине?",
+    "path": "prakticheskie-zadaniya/kak-protestirovat-process-oplaty-v-internet-magazine.md"
+   }
+  ]
+ },
+ "qe7df900dd86b": {
+  "q": "Что такое эвристики и мнемоники в тестировании?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Эвристики и мнемоники",
+    "path": "obshee/evristiki-i-mnemoniki.md"
+   }
+  ]
+ },
+ "qedd2c7c35b72": {
+  "q": "Что основное нужно проверить в мобильном приложении?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что основное нужно проверить при тестировании мобильного приложения?",
+    "path": "mobile/chto-osnovnoe-nuzhno-proverit-pri-testirovanii-mobilnogo-prilozheniya.md"
+   }
+  ]
+ },
+ "q2064d44a676c": {
+  "q": "Какие встроенные типы данных есть в Python?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Встроенные типы данных",
+    "path": "osnovy-programmirovaniya-na-python/vstroennye-tipy-dannykh.md"
+   }
+  ]
+ },
+ "q17f3919937d6": {
+  "q": "Сформулируйте негативные сценарии для POST-запроса, который создаёт пользователя.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Сформулируйте негативные сценарии для POST-запроса, который создаёт нового пользователя.",
+    "path": "prakticheskie-zadaniya/sformuliruite-negativnye-scenarii-dlya-post-zaprosa-kotoryi-sozdayot-novogo-polzovatelya..md"
+   }
+  ]
+ },
+ "q958938fe1f9e": {
+  "q": "Что такое list, dict и set comprehension?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как работают dict comprehension, list comprehension и set comprehension?",
+    "path": "osnovy-programmirovaniya-na-python/kak-rabotayut-dict-comprehension-list-comprehension-i-set-comprehension.md"
+   }
+  ]
+ },
+ "q1f4410c4bcc9": {
+  "q": "Какие типы изменяемые, а какие неизменяемые?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Изменяемые и неизменяемые типы данных",
+    "path": "osnovy-programmirovaniya-na-python/izmenyaemye-i-neizmenyaemye-tipy-dannykh.md"
+   }
+  ]
+ },
+ "q683f11a46f2f": {
+  "q": "Что такое генератор? Чем он отличается от итератора?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое генератор? Разница между генераторами и итераторами?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-generator-raznica-mezhdu-generatorami-i-iteratorami.md"
+   }
+  ]
+ },
+ "qe3bc1f388489": {
+  "q": "Как провести smoke-тестирование приложения типа Telegram?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как бы вы провели smoke-testing для приложения типа Telegram?",
+    "path": "prakticheskie-zadaniya/kak-by-vy-proveli-smoke-testing-dlya-prilozheniya-tipa-telegram.md"
+   }
+  ]
+ },
+ "q3affbe2d58cb": {
+  "q": "Посчитайте, сколько раз каждый символ встречается в строке.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Посчитайте, сколько раз символ встречается в строке.",
+    "path": "kodovye-zadachi/poschitaite-skolko-raz-simvol-vstrechaetsya-v-stroke..md"
+   }
+  ]
+ },
+ "qba9640f0cffd": {
+  "q": "Чем отличаются Scrum и Kanban?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какая разница между Scrum и Kanban?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakaya-raznica-mezhdu-scrum-i-kanban.md"
+   }
+  ]
+ },
+ "qe9fdc626684e": {
+  "q": "Чем отличаются аутентификация и авторизация?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какая разница между авторизацией и аутентификацией?",
+    "path": "web/kakaya-raznica-mezhdu-avtorizaciei-i-autentifikaciei.md"
+   }
+  ]
+ },
+ "qbfa68f58b2e8": {
+  "q": "Что такое JSON и XML? Чем они отличаются?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие отличия между XML и JSON?",
+    "path": "web/kakie-otlichiya-mezhdu-xml-i-json.md"
+   }
+  ]
+ },
+ "q072070749d36": {
+  "q": "Что такое access token и refresh token?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое access token и refresh token, как они работают?",
+    "path": "web/chto-takoe-access-token-i-refresh-token-kak-oni-rabotayut.md"
+   }
+  ]
+ },
+ "q85361aed8de1": {
+  "q": "Можно ли удалить ресурс через POST?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Можно ли удалить ресурс через post запрос?",
+    "path": "web/mozhno-li-udalit-resurs-cherez-post-zapros.md"
+   }
+  ]
+ },
+ "q90f5b112d703": {
+  "q": "Как убрать дубликаты из списка?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как убрать из списка дубликат элемента?",
+    "path": "osnovy-programmirovaniya-na-python/kak-ubrat-iz-spiska-dublikat-elementa.md"
+   }
+  ]
+ },
+ "q5b9b36229aa0": {
+  "q": "Что такое абстрактные классы?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Абстрактные классы и методы",
+    "path": "osnovy-programmirovaniya-na-python/abstraktnye-klassy-i-metody.md"
+   }
+  ]
+ },
+ "q7876fd3c5128": {
+  "q": "Чем отличаются REST и SOAP?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое REST API, SOAP? В чем разница?",
+    "path": "web/chto-takoe-rest-api-soap-v-chem-raznica.md"
+   }
+  ]
+ },
+ "qae0b0634dc94": {
+  "q": "Может ли у GET-запроса быть тело?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Есть ли тело у get запроса?",
+    "path": "web/est-li-telo-u-get-zaprosa.md"
+   }
+  ]
+ },
+ "q75e702c8e926": {
+  "q": "Что такое bug leakage и bug release?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Есть ли разница между bug leakage и bug release?",
+    "path": "teoriya-ruchnogo-testirovaniya/est-li-raznica-mezhdu-bug-leakage-i-bug-release.md"
+   }
+  ]
+ },
+ "q8aacc30a8d09": {
+  "q": "Поле username должно быть обязательным, но не является. Напишите баг-репорт.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Поле username должно быть обязательным, но оно не является обязательным. Приведите пример баг-репорт",
+    "path": "prakticheskie-zadaniya/pole-username-dolzhno-byt-obyazatelnym-no-ono-ne-yavlyaetsya-obyazatelnym.-privedite-primer-bag-repo.md"
+   }
+  ]
+ },
+ "q941561b74910": {
+  "q": "Что такое Definition of Done и Definition of Ready?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Definition of Done?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-definition-of-done.md"
+   }
+  ]
+ },
+ "q260c7f3feb33": {
+  "q": "Что такое end-to-end тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое End-to-End тест?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-end-to-end-test.md"
+   }
+  ]
+ },
+ "q3f7878d18ad6": {
+  "q": "Напишите функцию, которая проверяет, является ли строка палиндромом.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Напишите проверку на то, является ли строка палиндромом.",
+    "path": "kodovye-zadachi/napishite-proverku-na-to-yavlyaetsya-li-stroka-palindromom..md"
+   }
+  ]
+ },
+ "qb457fb93cdab": {
+  "q": "Что такое API и как его тестировать? Что нужно проверять?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как можно протестировать API, что там нужно проверять?",
+    "path": "web/kak-mozhno-protestirovat-api-chto-tam-nuzhno-proveryat.md"
+   }
+  ]
+ },
+ "q6853c3c92601": {
+  "q": "Как тестировать обновление приложения и миграцию локальных данных?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как тестировать миграцию локальных данных?",
+    "path": "mobile/kak-testirovat-migraciyu-lokalnykh-dannykh.md"
+   }
+  ]
+ },
+ "q768c32e08122": {
+  "q": "Чем отличаются PUT и PATCH?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какая разница между методами PUT и PATCH?",
+    "path": "web/kakaya-raznica-mezhdu-metodami-put-i-patch.md"
+   }
+  ]
+ },
+ "q4b027d1d274b": {
+  "q": "Что такое job и pipeline в CI?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Job и Pipeline",
+    "path": "ci/job-i-pipeline.md"
+   }
+  ]
+ },
+ "qc7896eb17053": {
+  "q": "Какие основные уязвимости веб-приложений вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Каковы есть основные виды уязвимости веб-приложений?",
+    "path": "web/kakovy-est-osnovnye-vidy-uyazvimosti-veb-prilozhenii.md"
+   }
+  ]
+ },
+ "q5dcef85ecab5": {
+  "q": "Что такое fuzz-тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое fuzz-тестирование и где его используют?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-fuzz-testirovanie-i-gde-ego-ispolzuyut.md"
+   }
+  ]
+ },
+ "qfee66ae3a0fb": {
+  "q": "Что делать, если разработчик не согласен, что это баг?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что делать, если разработчик не соглашается, что указанный баг действительно является багом?",
+    "path": "prakticheskie-zadaniya/chto-delat-esli-razrabotchik-ne-soglashaetsya-chto-ukazannyi-bag-deistvitelno-yavlyaetsya-bagom.md"
+   }
+  ]
+ },
+ "q8650d4663b34": {
+  "q": "Чем отличаются компилируемые и интерпретируемые языки?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Компилируемые и интерпретируемые языки программирования",
+    "path": "osnovy-programmirovaniya-na-python/kompiliruemye-i-interpretiruemye-yazyki-programmirovaniya.md"
+   }
+  ]
+ },
+ "q1dab4a7086f9": {
+  "q": "Что такое идемпотентность? Какие методы идемпотентны?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое идемпотентность?",
+    "path": "web/chto-takoe-idempotentnost.md"
+   }
+  ]
+ },
+ "q3e3068928b1f": {
+  "q": "Что такое транзакция и свойства ACID?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "ACID-транзакции",
+    "path": "bazy-dannykh/acid-tranzakcii.md"
+   }
+  ]
+ },
+ "q24a54708ac63": {
+  "q": "Что такое IaaS, PaaS и SaaS?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое IaaS и PaaS? Приведите примеры.",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/chto-takoe-iaas-i-paas-privedite-primery..md"
+   }
+  ]
+ },
+ "qc81d86db9912": {
+  "q": "Как часто нужно проводить регрессионное тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как часто следует проводить регрессионное тестирование продукта?",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-chasto-sleduet-provodit-regressionnoe-testirovanie-produkta.md"
+   }
+  ]
+ },
+ "q7f92d2ae4a2e": {
+  "q": "Что такое self join?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что вы понимаете под Self Join? Приведите примеры.",
+    "path": "bazy-dannykh/chto-vy-ponimaete-pod-self-join-privedite-primery..md"
+   }
+  ]
+ },
+ "q7b5b980aaf4d": {
+  "q": "Что такое контекстный менеджер и with?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Контекстный менеджер",
+    "path": "osnovy-programmirovaniya-na-python/kontekstnyi-menedzher.md"
+   }
+  ]
+ },
+ "q12bc287da589": {
+  "q": "Что такое Git и как он работает?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Git? Каков принцип его работы?",
+    "path": "git/chto-takoe-git-kakov-princip-ego-raboty.md"
+   }
+  ]
+ },
+ "qb083c02ad0df": {
+  "q": "Как разрешать конфликты слияния?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Конфликты слияния",
+    "path": "git/konflikty-sliyaniya.md"
+   }
+  ]
+ },
+ "qa08456a30ca0": {
+  "q": "Что такое модель OSI и стек TCP/IP?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Эталонные модели OSI и TCP/IP",
+    "path": "seti-i-okolo-nikh/etalonnye-modeli-osi-i-tcp-ip.md"
+   }
+  ]
+ },
+ "q78af855bdef1": {
+  "q": "Что такое тестирование удобства использования?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование удобства пользования (Usability testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-udobstva-polzovaniya-usability-testing.md"
+   }
+  ]
+ },
+ "q420504bb3271": {
+  "q": "Как работать с JSON в Python?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Функции по работе с json",
+    "path": "osnovy-programmirovaniya-na-python/funkcii-po-rabote-s-json.md"
+   }
+  ]
+ },
+ "qafd41f0481d0": {
+  "q": "Как проверить, что данные ушли на сервер, если нет доступа к бэкенду?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как проверить, что данные отправились на сервер, если у нас нет доступа к бэкенду?",
+    "path": "prakticheskie-zadaniya/kak-proverit-chto-dannye-otpravilis-na-server-esli-u-nas-net-dostupa-k-bekendu.md"
+   }
+  ]
+ },
+ "q61f37df13895": {
+  "q": "Что такое Selenium Grid и Selenoid?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Selenium Grid?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/chto-takoe-selenium-grid.md"
+   }
+  ]
+ },
+ "q0c9179857a32": {
+  "q": "Как снять логи с Android и iOS?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как снять логи с AOS/IOS?",
+    "path": "mobile/kak-snyat-logi-s-aos-ios.md"
+   }
+  ]
+ },
+ "qe27652c8ed00": {
+  "q": "Что такое микросервисы? Чем они отличаются от монолита?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Отличия монолита от микросервисов, их преимущества и недостатки",
+    "path": "web/otlichiya-monolita-ot-mikroservisov-ikh-preimushestva-i-nedostatki.md"
+   }
+  ]
+ },
+ "q5fc8ea645e28": {
+  "q": "Чем отличаются QA, QC и тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "QA/QC/Testing",
+    "path": "obshee/qa-qc-testing.md"
+   }
+  ]
+ },
+ "qe7d1b990f9d3": {
+  "q": "Что такое интуитивное (ad hoc) тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Свободное / Интуитивное тестирование (Adhoc, Ad-hoc Testing)",
+    "path": "vidy-metody-urovni-testirovaniya/svobodnoe-intuitivnoe-testirovanie-adhoc-ad-hoc-testing.md"
+   }
+  ]
+ },
+ "q558e3a693800": {
+  "q": "Что такое ADB и какие команды вы используете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое ADB?",
+    "path": "mobile/chto-takoe-adb.md"
+   }
+  ]
+ },
+ "qcbab4f9f0d69": {
+  "q": "Что такое тестовый оракул?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестовый оракул (Test oracle)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/testovyi-orakul-test-oracle.md"
+   }
+  ]
+ },
+ "q3d94a99fcc5d": {
+  "q": "Найдите три ключа с наибольшими значениями в словаре.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Найдите три ключа с самыми высокими значениями в словаре",
+    "path": "kodovye-zadachi/naidite-tri-klyucha-s-samymi-vysokimi-znacheniyami-v-slovare.md"
+   }
+  ]
+ },
+ "qe0d3f7320838": {
+  "q": "Что такое статическое и динамическое тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Статическое и динамическое тестирование (Static Testing, Dynamic Testing)",
+    "path": "vidy-metody-urovni-testirovaniya/staticheskoe-i-dinamicheskoe-testirovanie-static-testing-dynamic-testing.md"
+   }
+  ]
+ },
+ "q155fb0c49714": {
+  "q": "Чем отличаются copy и deepcopy?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Отличия reverse() от reversed(), sort() от sorted(), copy() от deepcopy()",
+    "path": "osnovy-programmirovaniya-na-python/otlichiya-reverse-ot-reversed-sort-ot-sorted-copy-ot-deepcopy.md"
+   }
+  ]
+ },
+ "qec13f09cb2af": {
+  "q": "Как работать с iframe?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое iframe и как с ним работать в Selenium?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/chto-takoe-iframe-i-kak-s-nim-rabotat-v-selenium.md"
+   }
+  ]
+ },
+ "qe1e7397f6c8f": {
+  "q": "Что такое тестовая среда и тестовый стенд?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестовая среда и тестовый стенд (Test Environment/Test Bed)",
+    "path": "obshee/testovaya-sreda-i-testovyi-stend-test-environment-test-bed.md"
+   }
+  ]
+ },
+ "qc7d4c957d5cb": {
+  "q": "Чем отличаются GET и POST?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какова разница между методами GET и POST?",
+    "path": "web/kakova-raznica-mezhdu-metodami-get-i-post.md"
+   }
+  ]
+ },
+ "q51bb43a831c5": {
+  "q": "Какие версии Android тестировать, если поддержка заявлена с 5.0?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие версии Android нужно тестировать, если заказчик сказал поддерживать с версии 5.0?",
+    "path": "mobile/kakie-versii-android-nuzhno-testirovat-esli-zakazchik-skazal-podderzhivat-s-versii-5.0.md"
+   }
+  ]
+ },
+ "q6606dc09b9b2": {
+  "q": "Чем отличаются виртуальная машина и контейнер?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как используют виртуальные машины и контейнеры в автоматизации?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/kak-ispolzuyut-virtualnye-mashiny-i-konteinery-v-avtomatizacii.md"
+   }
+  ]
+ },
+ "q531066fe0d7a": {
+  "q": "Что проверять при входе по Face ID или отпечатку?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что нужно проверять при использовании сканера отпечатка/Face ID?",
+    "path": "mobile/chto-nuzhno-proveryat-pri-ispolzovanii-skanera-otpechatka-face-id.md"
+   }
+  ]
+ },
+ "qa5165e443eaf": {
+  "q": "Чем отличаются is и ==?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "В чем разница в использовании между is и ==?",
+    "path": "osnovy-programmirovaniya-na-python/v-chem-raznica-v-ispolzovanii-mezhdu-is-i.md"
+   }
+  ]
+ },
+ "qbfd8a4bf777b": {
+  "q": "Что делает yield?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "yield",
+    "path": "osnovy-programmirovaniya-na-python/yield.md"
+   }
+  ]
+ },
+ "q73b5e698d158": {
+  "q": "Что такое критерии приёмки?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Критерии приемки (Acceptance Criteria)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/kriterii-priemki-acceptance-criteria.md"
+   }
+  ]
+ },
+ "qa3b9dc663054": {
+  "q": "Что такое тестирование доступности?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование доступности (Accessibility testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-dostupnosti-accessibility-testing.md"
+   }
+  ]
+ },
+ "qfd70143e5684": {
+  "q": "Что такое тестирование на основе рисков?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование, основанное на рисках (Risk-Based Testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-osnovannoe-na-riskakh-risk-based-testing.md"
+   }
+  ]
+ },
+ "qb7b7c9110f55": {
+  "q": "Что такое CRUD?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как расшифровывается CRUD?",
+    "path": "web/kak-rasshifrovyvaetsya-crud.md"
+   }
+  ]
+ },
+ "q5691f72c67db": {
+  "q": "Что такое системное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Системное тестирование (System Testing)",
+    "path": "vidy-metody-urovni-testirovaniya/sistemnoe-testirovanie-system-testing.md"
+   }
+  ]
+ },
+ "qda315b9bb0a4": {
+  "q": "Что такое инсталляционное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Инсталляционное тестирование (Installation Testing)",
+    "path": "vidy-metody-urovni-testirovaniya/installyacionnoe-testirovanie-installation-testing.md"
+   }
+  ]
+ },
+ "q329f96601ca4": {
+  "q": "Какие недостатки у Selenium?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "По Вашему Мнению, Каковы Основные Недостатки Selenium?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/po-vashemu-mneniyu-kakovy-osnovnye-nedostatki-selenium.md"
+   }
+  ]
+ },
+ "q05294b6e9b15": {
+  "q": "Может ли сервер вернуть 400, если проблема на его стороне?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие статус-коды ошибок бывают? Может ли сервер отправить код 400, если проблема на его стороне?",
+    "path": "web/kakie-status-kody-oshibok-byvayut-mozhet-li-server-otpravit-kod-400-esli-problema-na-ego-storone.md"
+   }
+  ]
+ },
+ "qb80b6a29cf37": {
+  "q": "Что такое JWT-токен и как он устроен?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое jwt токен и как он работает?",
+    "path": "web/chto-takoe-jwt-token-i-kak-on-rabotaet.md"
+   }
+  ]
+ },
+ "qb0fd3d51123a": {
+  "q": "Что такое SDLC? Какие этапы у жизненного цикла разработки?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "SDLC и STLC: жизненный цикл разработки и тестирования",
+    "path": "teoriya-ruchnogo-testirovaniya/sdlc-i-stlc-zhiznennyi-cikl-razrabotki-i-testirovaniya.md"
+   }
+  ]
+ },
+ "qf267f869963d": {
+  "q": "Что такое STLC? Какие этапы у жизненного цикла тестирования?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "SDLC и STLC: жизненный цикл разработки и тестирования",
+    "path": "teoriya-ruchnogo-testirovaniya/sdlc-i-stlc-zhiznennyi-cikl-razrabotki-i-testirovaniya.md"
+   }
+  ]
+ },
+ "qb4acf08e162b": {
+  "q": "Как запустить контейнер и посмотреть его логи?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как запустить контейнер?",
+    "path": "ci/kak-zapustit-konteiner.md"
+   }
+  ]
+ },
+ "q929bc55e4c67": {
+  "q": "Что такое user story?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Пользовательские истории (User stories)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/polzovatelskie-istorii-user-stories.md"
+   }
+  ]
+ },
+ "qbfe9c782a340": {
+  "q": "Как обрабатывать исключения в Python?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Исключения",
+    "path": "osnovy-programmirovaniya-na-python/isklyucheniya.md"
+   }
+  ]
+ },
+ "qcb740cc04473": {
+  "q": "Какие команды Linux вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие команды Linux Shell вам известны?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/kakie-komandy-linux-shell-vam-izvestny.md"
+   }
+  ]
+ },
+ "q53d23a30aa0b": {
+  "q": "Какие плюсы и минусы у автоматизации тестирования?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие минусы полной автоматизации тестирования?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakie-minusy-polnoi-avtomatizacii-testirovaniya.md"
+   }
+  ]
+ },
+ "q224023ca437b": {
+  "q": "Напишите функцию, которая переворачивает строку.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Напишите функцию, которая переворачивает строку. Входная строка задана в виде массива символов s.",
+    "path": "kodovye-zadachi/napishite-funkciyu-kotoraya-perevorachivaet-stroku.-vkhodnaya-stroka-zadana-v-vide-massiva-simvolov.md"
+   }
+  ]
+ },
+ "q0152004919ba": {
+  "q": "Что такое сложность алгоритма и O-нотация?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Временная сложность алгоритма",
+    "path": "osnovy-programmirovaniya-na-python/vremennaya-slozhnost-algoritma.md"
+   }
+  ]
+ },
+ "qeac37bc8bc92": {
+  "q": "Отсортируйте словарь по значениям.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Отсортируйте словарь по значению в порядке возрастания и убывания.",
+    "path": "kodovye-zadachi/otsortiruite-slovar-po-znacheniyu-v-poryadke-vozrastaniya-i-ubyvaniya..md"
+   }
+  ]
+ },
+ "qf263bbcb70c8": {
+  "q": "Что такое альфа- и бета-тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Альфа- и бета- тестирование (Alpha Testing and Beta Testing)",
+    "path": "obshee/alfa-i-beta-testirovanie-alpha-testing-and-beta-testing.md"
+   }
+  ]
+ },
+ "qdfa78d892f21": {
+  "q": "Как протестировать чат-бота?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование чат-бота (Chatbot)",
+    "path": "testirovanie-v-raznykh-sferakh-oblastyakh-testing-different-domains/testirovanie-chat-bota-chatbot.md"
+   }
+  ]
+ },
+ "q02e813c023b9": {
+  "q": "Что такое Zero Bug Policy?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Политика отсутствия багов (ZBP - Zero Bug Policy)",
+    "path": "obshee/politika-otsutstviya-bagov-zbp-zero-bug-policy.md"
+   }
+  ]
+ },
+ "q95e16e256cf2": {
+  "q": "Что такое импакт-анализ?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Импакт анализ (анализ влияния, Impact Analysis)",
+    "path": "obshee/impakt-analiz-analiz-vliyaniya-impact-analysis.md"
+   }
+  ]
+ },
+ "qef7253363684": {
+  "q": "Что такое матрица трассируемости?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Матрица трассировки (матрицы трассируемости, traceability matrix)",
+    "path": "teoriya-ruchnogo-testirovaniya/matrica-trassirovki-matricy-trassiruemosti-traceability-matrix.md"
+   }
+  ]
+ },
+ "q03c686bdecba": {
+  "q": "Какие виды локаторов вы знаете? Какие лучше использовать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие виды локаторов страницы существуют? Каковы их преимущества и недостатки?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/kakie-vidy-lokatorov-stranicy-sushestvuyut-kakovy-ikh-preimushestva-i-nedostatki.md"
+   }
+  ]
+ },
+ "qb7995c33c4b3": {
+  "q": "Что такое локализация и интернационализация? Как их тестировать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Приведите примеры подходов для тестирования локализации.",
+    "path": "teoriya-ruchnogo-testirovaniya/privedite-primery-podkhodov-dlya-testirovaniya-lokalizacii..md"
+   }
+  ]
+ },
+ "q65d9f91a7552": {
+  "q": "Объедините несколько словарей в один.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Напишите программу для слияния нескольких словарей в один.",
+    "path": "kodovye-zadachi/napishite-programmu-dlya-sliyaniya-neskolkikh-slovarei-v-odin..md"
+   }
+  ]
+ },
+ "q02bbeb2df9fd": {
+  "q": "Как перехватить трафик мобильного приложения?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как происходит перехват трафика http/https для мобильных устройств?",
+    "path": "mobile/kak-proiskhodit-perekhvat-trafika-http-https-dlya-mobilnykh-ustroistv.md"
+   }
+  ]
+ },
+ "q1415149b9d4d": {
+  "q": "Онлайн-калькулятор на 1+1 выдаёт 3. Как будете искать причину?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "У вас есть онлайн-калькулятор. Вы вводите 1+1 и получаете 3. Расскажите, как вы будете искать...",
+    "path": "prakticheskie-zadaniya/u-vas-est-onlain-kalkulyator.-vy-vvodite-1+1-i-poluchaete-3.-rasskazhite-kak-vy-budete-iskat....md"
+   }
+  ]
+ },
+ "qd80948897c04": {
+  "q": "Чем отличаются @staticmethod, @classmethod и обычные методы?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "static методы и classmethod методы в python, различия между ними и примеры использования",
+    "path": "osnovy-programmirovaniya-na-python/static-metody-i-classmethod-metody-v-python-razlichiya-mezhdu-nimi-i-primery-ispolzovaniya.md"
+   }
+  ]
+ },
+ "q4aa5609514d4": {
+  "q": "Какие метрики тестирования вы знаете и используете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Метрики тестирования (Software Test Metrics)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/metriki-testirovaniya-software-test-metrics.md"
+   }
+  ]
+ },
+ "q7543a09375e1": {
+  "q": "Как прочитать данные из динамической таблицы?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как вычитать данные из динамической веб-таблицы?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-vychitat-dannye-iz-dinamicheskoi-veb-tablicy.md"
+   }
+  ]
+ },
+ "q9122e979ece4": {
+  "q": "Что такое CASE в SQL?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое case function?",
+    "path": "bazy-dannykh/chto-takoe-case-function.md"
+   }
+  ]
+ },
+ "q19d56a658fb0": {
+  "q": "Назовите негативные тест-кейсы для формы с полями email, password и кнопкой submit.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Веб-страница с полями e-mail, password и кнопкой submit. Назовите отрицательные тест-кейсы",
+    "path": "prakticheskie-zadaniya/veb-stranica-s-polyami-e-mail-password-i-knopkoi-submit.-nazovite-otricatelnye-test-keisy.md"
+   }
+  ]
+ },
+ "q4cf721c1c1aa": {
+  "q": "Что такое тестовый сценарий и тестовый набор?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестовый сценарий (Test scenario)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/testovyi-scenarii-test-scenario.md"
+   }
+  ]
+ },
+ "q8df5c71b2446": {
+  "q": "Чем отличаются Android и iOS с точки зрения тестирования?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Основные различия Android/iOS",
+    "path": "mobilnoe-testirovanie/osnovnye-razlichiya-android-ios.md"
+   }
+  ]
+ },
+ "qde7052b7d305": {
+  "q": "Какие тесты стоит автоматизировать, а какие оставить ручными?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие типы тестов имеет смысл автоматизировать в первую очередь, а какие лучше оставить ручными?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakie-tipy-testov-imeet-smysl-avtomatizirovat-v-pervuyu-ochered-a-kakie-luchshe-ostavit-ruchnymi.md"
+   }
+  ]
+ },
+ "q14e70dc40a32": {
+  "q": "Что такое smoke-тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Smoke и Sanity тестирование",
+    "path": "teoriya-ruchnogo-testirovaniya/smoke-i-sanity-testirovanie.md"
+   }
+  ]
+ },
+ "qdf9fd0e03ce3": {
+  "q": "Что такое sanity-тестирование? Чем оно отличается от smoke?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Smoke и Sanity тестирование",
+    "path": "teoriya-ruchnogo-testirovaniya/smoke-i-sanity-testirovanie.md"
+   }
+  ]
+ },
+ "q513fc2b9b2d9": {
+  "q": "Чем отличаются mock, stub и fake?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое mock/stub? Какие знаете инструменты для работы с ними?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-mock-stub-kakie-znaete-instrumenty-dlya-raboty-s-nimi.md"
+   }
+  ]
+ },
+ "q30cd0aab5fc9": {
+  "q": "Как тестировать покупки в мобильном приложении?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование покупок в Android-приложениях",
+    "path": "mobilnoe-testirovanie/android/testirovanie-pokupok-v-android-prilozheniyakh.md"
+   }
+  ]
+ },
+ "qef42423ee0fb": {
+  "q": "Что такое регрессионное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Регрессионные виды тестирования (Regression testing)",
+    "path": "vidy-metody-urovni-testirovaniya/regressionnye-vidy-testirovaniya-regression-testing.md"
+   }
+  ]
+ },
+ "q1e181d93bdd3": {
+  "q": "Чем отличаются регрессионное тестирование и ретест?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Регрессионные виды тестирования (Regression testing)",
+    "path": "vidy-metody-urovni-testirovaniya/regressionnye-vidy-testirovaniya-regression-testing.md"
+   }
+  ]
+ },
+ "q8c991d2ee433": {
+  "q": "Что такое тестирование безопасности и что проверяет тестировщик?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование безопасности (Security and Access Control testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-bezopasnosti-security-and-access-control-testing.md"
+   }
+  ]
+ },
+ "q0b2c4de4fb9b": {
+  "q": "Как тестировать диплинки?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование дип линков (mobile deep links)",
+    "path": "mobilnoe-testirovanie/testirovanie-dip-linkov-mobile-deep-links.md"
+   }
+  ]
+ },
+ "q9ec72b0819b3": {
+  "q": "Что такое приёмочное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Приемочное тестирование (AT - Acceptance testing)",
+    "path": "vidy-metody-urovni-testirovaniya/priemochnoe-testirovanie-at-acceptance-testing.md"
+   }
+  ]
+ },
+ "q0c1a38bff76f": {
+  "q": "Опишите класс Car с атрибутами и методами.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "описать класс Car",
+    "path": "kodovye-zadachi/opisat-klass-car.md"
+   }
+  ]
+ },
+ "qc641b9f8e833": {
+  "q": "Чем отличаются __init__ и __new__?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Конструктор класса",
+    "path": "osnovy-programmirovaniya-na-python/konstruktor-klassa.md"
+   }
+  ]
+ },
+ "q6acbfaa59c2e": {
+  "q": "Чем тестирование мобильных приложений отличается от веб?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Особенности в тестировании мобильных приложений",
+    "path": "mobilnoe-testirovanie/osobennosti-v-testirovanii-mobilnykh-prilozhenii.md"
+   }
+  ]
+ },
+ "qa5aad95d456a": {
+  "q": "Как тестировщик получает сборку мобильного приложения?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Каким образом тестировщик получает приложение на тест?",
+    "path": "mobilnoe-testirovanie/kakim-obrazom-testirovshik-poluchaet-prilozhenie-na-test.md"
+   }
+  ]
+ },
+ "q1e38746a7c58": {
+  "q": "Как тестировать требования?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Требования (Requirements)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/trebovaniya-requirements.md"
+   }
+  ]
+ },
+ "q3d99039e7213": {
+  "q": "Что такое тестирование клиентской и серверной части?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование клиентской части и серверной (Frontend testing Vs. Backend testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-klientskoi-chasti-i-servernoi-frontend-testing-vs.-backend-testing.md"
+   }
+  ]
+ },
+ "q5fc26df92dc9": {
+  "q": "Что такое тест-дизайн и зачем он нужен?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тест-дизайн и техники тест-дизайна (Test Design and Software Testing Techniques)",
+    "path": "test-dizain/test-dizain-i-tekhniki-test-dizaina-test-design-and-software-testing-techniques.md"
+   }
+  ]
+ },
+ "q39a53a6c5932": {
+  "q": "Что такое тестирование миграции данных?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование миграции данных (ETL)",
+    "path": "testirovanie-v-raznykh-sferakh-oblastyakh-testing-different-domains/testirovanie-migracii-dannykh-etl.md"
+   }
+  ]
+ },
+ "q716ee347769d": {
+  "q": "Как протестировать интернет-магазин?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Есть веб-приложение интернет-магазина (регистрация, логин, поиск товаров, корзина и покупки)....",
+    "path": "prakticheskie-zadaniya/est-veb-prilozhenie-internet-magazina-registraciya-login-poisk-tovarov-korzina-i-pokupki-.....md"
+   }
+  ]
+ },
+ "qcc38c48ce26c": {
+  "q": "Как взаимодействуют Selenium, драйвер браузера и браузер?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как взаимодействуют клиентская библиотека Selenium, драйвер браузера и сам браузер?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-vzaimodeistvuyut-klientskaya-biblioteka-selenium-draiver-brauzera-i-sam-brauzer.md"
+   }
+  ]
+ },
+ "q1c859acae2f6": {
+  "q": "Чем отличаются cookies, localStorage и sessionStorage?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "localStorage, sessionStorage, cookies, IndexedDB",
+    "path": "web/localstorage-sessionstorage-cookies-indexeddb.md"
+   }
+  ]
+ },
+ "q0cf2bec9b843": {
+  "q": "Как встроить автотесты в CI/CD?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как автоматическое тестирование интегрируется в CI?",
+    "path": "ci/kak-avtomaticheskoe-testirovanie-integriruetsya-v-ci.md"
+   }
+  ]
+ },
+ "q02389644778f": {
+  "q": "Какие классы статус-кодов существуют?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Охарактеризуйте каждый класс status code (1хх; 2xx; 3xx; 4xx; 5xx).",
+    "path": "web/okharakterizuite-kazhdyi-klass-status-code-1khkh-2xx-3xx-4xx-5xx-..md"
+   }
+  ]
+ },
+ "qda7759bfab1e": {
+  "q": "Что такое WebSocket и как его тестировать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое WebSocket и как проверить обрыв соединения?",
+    "path": "web/chto-takoe-websocket-i-kak-proverit-obryv-soedineniya.md"
+   }
+  ]
+ },
+ "q6ec97d27eaca": {
+  "q": "Что такое SPA и AJAX?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Одностраничное приложение (single page application, SPA)?",
+    "path": "web/chto-takoe-odnostranichnoe-prilozhenie-single-page-application-spa.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Что такое AJAX?",
+    "path": "web/chto-takoe-ajax.md"
+   }
+  ]
+ },
+ "q7b5f7d37e977": {
+  "q": "Какие исключения бывают в Selenium?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие exceptions может бросить Selenium? Что они означают и как их обрабатывать?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kakie-exceptions-mozhet-brosit-selenium-chto-oni-oznachayut-i-kak-ikh-obrabatyvat.md"
+   }
+  ]
+ },
+ "qa2a49e6ca75b": {
+  "q": "Как запускать тесты параллельно?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Параллельное тестирование",
+    "path": "avtomatizaciya-testirovaniya/parallelnoe-testirovanie-parallel-testing.md"
+   }
+  ]
+ },
+ "qd67206537db4": {
+  "q": "Что такое кэш и зачем его чистить при тестировании?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое кэш?",
+    "path": "web/chto-takoe-kesh.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Зачем чистить кэш?",
+    "path": "web/zachem-chistit-kesh.md"
+   }
+  ]
+ },
+ "q5b65b5f90396": {
+  "q": "Что такое анализ первопричин (RCA)?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое RCA в тестировании? Нужно ли его проводить?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-rca-v-testirovanii-nuzhno-li-ego-provodit.md"
+   }
+  ]
+ },
+ "q9627c65f0727": {
+  "q": "Как тестировать продукт без требований и документации?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как будете тестировать программу, если для продукта нет документации?",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-budete-testirovat-programmu-esli-dlya-produkta-net-dokumentacii.md"
+   }
+  ]
+ },
+ "q6822abea78a8": {
+  "q": "Чем отличаются ошибка, дефект, сбой и отказ?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Bug, Error, Failure, Fault?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-bug-error-failure-fault.md"
+   }
+  ]
+ },
+ "q07fbd5fe0f81": {
+  "q": "Как тестировать базы данных?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие тест-кейсы можно сдать для тестирования баз данных?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakie-test-keisy-mozhno-sdat-dlya-testirovaniya-baz-dannykh.md"
+   }
+  ]
+ },
+ "q8635708512b6": {
+  "q": "Что такое тестирование со сдвигом влево?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое тестирование со смещением влево (Shift left testing)?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-testirovanie-so-smesheniem-vlevo-shift-left-testing.md"
+   }
+  ]
+ },
+ "q110e67f897e6": {
+  "q": "Что такое модульное (юнит) тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "В чем смысл юнит-тестов?",
+    "path": "teoriya-ruchnogo-testirovaniya/v-chem-smysl-yunit-testov.md"
+   }
+  ]
+ },
+ "q15e72a4d68ad": {
+  "q": "Как внедрить автоматизацию на проекте с нуля?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Расскажите, как вы будете строить и внедрять стратегию по автоматизации тестирования.",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/rasskazhite-kak-vy-budete-stroit-i-vnedryat-strategiyu-po-avtomatizacii-testirovaniya..md"
+   }
+  ]
+ },
+ "qf841509aed3e": {
+  "q": "Чем отличаются эмулятор и симулятор?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое и чем отличаются виртуальная машина, симулятор и эмулятор?",
+    "path": "mobile/chto-takoe-i-chem-otlichayutsya-virtualnaya-mashina-simulyator-i-emulyator.md"
+   }
+  ]
+ },
+ "qe8fdd051d933": {
+  "q": "Что такое драйвер браузера и browser options?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое драйвер браузера?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/chto-takoe-draiver-brauzera.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Для чего используют browser capabilities, arguments и options?",
+    "path": "mobile/dlya-chego-ispolzuyut-browser-capabilities-arguments-i-options.md"
+   }
+  ]
+ },
+ "qe153c60ec216": {
+  "q": "Чем отличаются образ и контейнер в Docker?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое образ?",
+    "path": "ci/chto-takoe-obraz.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Образ контейнера и контейнер",
+    "path": "ci/obraz-konteinera-i-konteiner.md"
+   }
+  ]
+ },
+ "qebe7613febd1": {
+  "q": "Какие бывают базы данных? Чем отличаются реляционные и нереляционные?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие бывают виды баз данных?",
+    "path": "bazy-dannykh/kakie-byvayut-vidy-baz-dannykh.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Преимущества и недостатки, особенности реляционных и нереляционных баз данных",
+    "path": "bazy-dannykh/preimushestva-i-nedostatki-osobennosti-relyacionnykh-i-nerelyacionnykh-baz-dannykh.md"
+   }
+  ]
+ },
+ "q2b0d18eff24a": {
+  "q": "Что такое модули и пакеты? Зачем нужен __init__.py?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Пакеты и модули",
+    "path": "osnovy-programmirovaniya-na-python/pakety-i-moduli.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "__init__.py",
+    "path": "osnovy-programmirovaniya-na-python/__init__.py.md"
+   }
+  ]
+ },
+ "q6b1225352821": {
+  "q": "Из чего состоит веб-страница?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какую структуру имеет веб-страница?",
+    "path": "web/kakuyu-strukturu-imeet-veb-stranica.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Что такое HTML/CSS/JavaScript?",
+    "path": "web/chto-takoe-html-css-javascript.md"
+   }
+  ]
+ },
+ "q8c9cb754a27e": {
+  "q": "Что такое HTTP и HTTPS? Чем они отличаются?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "HTTP",
+    "path": "seti-i-okolo-nikh/http.md"
+   }
+  ]
+ },
+ "q4bfb4c56c1d2": {
+  "q": "Из чего состоят HTTP-запрос и HTTP-ответ?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "HTTP",
+    "path": "seti-i-okolo-nikh/http.md"
+   }
+  ]
+ },
+ "q260e1dbde148": {
+  "q": "Что такое тест-кейс? Из чего он состоит?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тест-кейс (Test case)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/test-keis-test-case.md"
+   }
+  ]
+ },
+ "q5efd592f80fc": {
+  "q": "Что такое тестирование методом чёрного, белого и серого ящика?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Методы тестирования (White/Black/Grey Box)",
+    "path": "vidy-metody-urovni-testirovaniya/metody-testirovaniya-white-black-grey-box.md"
+   }
+  ]
+ },
+ "qac93ee7cce60": {
+  "q": "Приведите пример бага с высокой серьёзностью и низким приоритетом и наоборот.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Приведите примеры серьезного, но не приоритетного бага",
+    "path": "teoriya-ruchnogo-testirovaniya/privedite-primery-sereznogo-no-ne-prioritetnogo-baga.md"
+   }
+  ]
+ },
+ "q29ab1ed79406": {
+  "q": "Найдите общие элементы двух списков.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Нужно вернуть список, который состоит из элементов, общих для этих двух списков.",
+    "path": "kodovye-zadachi/nuzhno-vernut-spisok-kotoryi-sostoit-iz-elementov-obshikh-dlya-etikh-dvukh-spiskov..md"
+   }
+  ]
+ },
+ "qee8345b43cfe": {
+  "q": "Что такое кроссбраузерное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Кроссбраузерное тестирование (Cross-browser testing)",
+    "path": "vidy-metody-urovni-testirovaniya/krossbrauzernoe-testirovanie-cross-browser-testing.md"
+   }
+  ]
+ },
+ "q0f98a288b687": {
+  "q": "Что такое CI/CD и какое место в нём занимает тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое CI/CD? Какие плюсы и минусы этого подхода?",
+    "path": "ci/chto-takoe-ci-cd-kakie-plyusy-i-minusy-etogo-podkhoda.md"
+   }
+  ]
+ },
+ "q7e961d0d0f76": {
+  "q": "Что такое множество и когда его использовать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Множества и их методы",
+    "path": "osnovy-programmirovaniya-na-python/mnozhestva-i-ikh-metody.md"
+   }
+  ]
+ },
+ "q3dfc07da806e": {
+  "q": "Что такое жизненный цикл Activity в Android?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Опишите жизненный цикл активити.",
+    "path": "mobile/opishite-zhiznennyi-cikl-aktiviti..md"
+   }
+  ]
+ },
+ "qd34935e7bbbf": {
+  "q": "Какие виды нефункционального тестирования вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Нефункциональное тестирование (Non-Functional testing)",
+    "path": "vidy-metody-urovni-testirovaniya/nefunkcionalnoe-testirovanie-non-functional-testing.md"
+   }
+  ]
+ },
+ "q2d02877a13a9": {
+  "q": "Что такое нагрузочное тестирование? Какие его виды вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Нагрузочное тестирование (Load testing)",
+    "path": "vidy-metody-urovni-testirovaniya/nagruzochnoe-testirovanie-load-testing.md"
+   }
+  ]
+ },
+ "q35f16c1b037d": {
+  "q": "Что значит if __name__ == \"__main__\"?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "main()",
+    "path": "osnovy-programmirovaniya-na-python/main.md"
+   }
+  ]
+ },
+ "qbfc823048ec2": {
+  "q": "Чем отличаются список и кортеж?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Разница между списком и кортежем",
+    "path": "osnovy-programmirovaniya-na-python/raznica-mezhdu-spiskom-i-kortezhem.md"
+   }
+  ]
+ },
+ "q1dac23aefbbe": {
+  "q": "Чем отличаются sort() и sorted()?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Отличия reverse() от reversed(), sort() от sorted(), copy() от deepcopy()",
+    "path": "osnovy-programmirovaniya-na-python/otlichiya-reverse-ot-reversed-sort-ot-sorted-copy-ot-deepcopy.md"
+   }
+  ]
+ },
+ "qce9e7581b8ba": {
+  "q": "Какие граничные значения вы проверите в форме оплаты товара?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Написать предельные значения для ввода в форму оплаты товара на сайте.",
+    "path": "prakticheskie-zadaniya/napisat-predelnye-znacheniya-dlya-vvoda-v-formu-oplaty-tovara-na-saite..md"
+   }
+  ]
+ },
+ "q3ebd2012cbe5": {
+  "q": "Что такое виртуальное окружение и зачем оно?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Пакетные менеджеры и виртуальное окружение",
+    "path": "osnovy-programmirovaniya-na-python/paketnye-menedzhery-i-virtualnoe-okruzhenie.md"
+   }
+  ]
+ },
+ "q9e86771eee55": {
+  "q": "Как управлять зависимостями в Python?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Пакетные менеджеры и виртуальное окружение",
+    "path": "osnovy-programmirovaniya-na-python/paketnye-menedzhery-i-virtualnoe-okruzhenie.md"
+   }
+  ]
+ },
+ "q329e65f26a7d": {
+  "q": "Что такое верификация и валидация? Чем они отличаются?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Верификация и валидация (Verification and Validation)",
+    "path": "obshee/verifikaciya-i-validaciya-verification-and-validation.md"
+   }
+  ]
+ },
+ "q0e9f5f3344f4": {
+  "q": "Что такое тестирование ПО и зачем оно нужно?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Почему требуется тестирование ПО?",
+    "path": "obshee/pochemu-trebuetsya-testirovanie-po.md"
+   }
+  ]
+ },
+ "q0080f940e958": {
+  "q": "Что такое пирамида тестирования?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Пирамида / уровни тестирования (Test Pyramid / Testing Levels)",
+    "path": "vidy-metody-urovni-testirovaniya/piramida-urovni-testirovaniya-test-pyramid-testing-levels.md"
+   }
+  ]
+ },
+ "q4166ec57c781": {
+  "q": "Какие уровни тестирования существуют?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Пирамида / уровни тестирования (Test Pyramid / Testing Levels)",
+    "path": "vidy-metody-urovni-testirovaniya/piramida-urovni-testirovaniya-test-pyramid-testing-levels.md"
+   }
+  ]
+ },
+ "qad935c0c40e1": {
+  "q": "Когда можно закончить тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Когда можно считать, что тестирование окончено?",
+    "path": "teoriya-ruchnogo-testirovaniya/kogda-mozhno-schitat-chto-testirovanie-okoncheno.md"
+   }
+  ]
+ },
+ "q090c2167c165": {
+  "q": "Что такое ROI автоматизации и как его посчитать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое ROI и как его считать?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-roi-i-kak-ego-schitat.md"
+   }
+  ]
+ },
+ "qf0fd4586e44f": {
+  "q": "Как настроить pipeline для автотестов?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как настроить Job или Pipeline на знакомом вам CI-инструменте?",
+    "path": "ci/kak-nastroit-job-ili-pipeline-na-znakomom-vam-ci-instrumente.md"
+   }
+  ]
+ },
+ "q06046285aed1": {
+  "q": "Что такое интеграционное тестирование? Какие подходы к нему бывают?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Интеграционное тестирование (Integration testing)",
+    "path": "vidy-metody-urovni-testirovaniya/integracionnoe-testirovanie-integration-testing.md"
+   }
+  ]
+ },
+ "q8bb61fddba4e": {
+  "q": "Что такое severity и priority? Чем они отличаются?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Серьезность и приоритет Дефекта (Severity & Priority)",
+    "path": "obshee/sereznost-i-prioritet-defekta-severity-and-priority.md"
+   }
+  ]
+ },
+ "qad82ee443f4c": {
+  "q": "Найдите самое частое слово в тексте.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Напишите программу, которая принимает текст и выводит два слова: наиболее часто встречающееся и само",
+    "path": "kodovye-zadachi/napishite-programmu-kotoraya-prinimaet-tekst-i-vyvodit-dva-slova-naibolee-chasto-vstrechayusheesya-i.md"
+   }
+  ]
+ },
+ "qdd433249a563": {
+  "q": "Как протестировать поле даты рождения, которое отсеивает пользователей младше 18 лет?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Написать тестовые наборы данных для поля ввода даты, которое отсеивает юзеров в возрасте до 18 лет",
+    "path": "prakticheskie-zadaniya/napisat-testovye-nabory-dannykh-dlya-polya-vvoda-daty-kotoroe-otseivaet-yuzerov-v-vozraste-do-18-let.md"
+   }
+  ]
+ },
+ "q69f20e3d8862": {
+  "q": "Что такое попарное тестирование и когда его использовать?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Когда нужно использовать технику Pairwise?",
+    "path": "teoriya-ruchnogo-testirovaniya/kogda-nuzhno-ispolzovat-tekhniku-pairwise.md"
+   }
+  ]
+ },
+ "qc2cc180b78d9": {
+  "q": "Что такое REST? Какие у него принципы?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое REST API, SOAP? В чем разница?",
+    "path": "web/chto-takoe-rest-api-soap-v-chem-raznica.md"
+   }
+  ]
+ },
+ "q3f2e351bdcb9": {
+  "q": "Как меняется стоимость дефекта на разных этапах разработки?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как меняется стоимость дефекта при тестировании программного обеспечения?",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-menyaetsya-stoimost-defekta-pri-testirovanii-programmnogo-obespecheniya.md"
+   }
+  ]
+ },
+ "qf1d1ff4508b6": {
+  "q": "Что такое коммит и ветка в Git?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое commits, branches в Git?",
+    "path": "git/chto-takoe-commits-branches-v-git.md"
+   }
+  ]
+ },
+ "q0d775db12e3f": {
+  "q": "Какие техники белого ящика вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Dynamic - White box",
+    "path": "test-dizain/dynamic-white-box.md"
+   }
+  ]
+ },
+ "q2c180742f608": {
+  "q": "Найдите индекс первого вхождения подстроки в строку.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Если даны две строки needle и haystack, верните индекс первого вхождения needle в haystack или -1,",
+    "path": "kodovye-zadachi/esli-dany-dve-stroki-needle-i-haystack-vernite-indeks-pervogo-vkhozhdeniya-needle-v-haystack-ili-1.md"
+   }
+  ]
+ },
+ "q94abfd900ff7": {
+  "q": "Что такое тестирование совместимости и конфигурационное тестирование?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование совместимости/взаимодействия (Compatibility/Interoperability testing)",
+    "path": "vidy-metody-urovni-testirovaniya/testirovanie-sovmestimosti-vzaimodeistviya-compatibility-interoperability-testing.md"
+   },
+   {
+    "src": "qa_bible",
+    "title": "Конфигурационное тестирование (Configuration testing)",
+    "path": "vidy-metody-urovni-testirovaniya/konfiguracionnoe-testirovanie-configuration-testing.md"
+   }
+  ]
+ },
+ "qd38760defd41": {
+  "q": "Что такое баг-репорт? Из чего он состоит?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Баг-репорт (Defect/bug report)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/bag-report-defect-bug-report.md"
+   }
+  ]
+ },
+ "q3b957423e841": {
+  "q": "Что такое требования? Какие бывают виды требований?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Требования (Requirements)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/trebovaniya-requirements.md"
+   }
+  ]
+ },
+ "q2ee9fd69b33e": {
+  "q": "Для чего нужны DevTools браузера и как вы их используете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Для чего необходимы инструменты разработчика в браузере (Chrome DevTools) и как они помогают в тести",
+    "path": "web/dlya-chego-neobkhodimy-instrumenty-razrabotchika-v-brauzere-chrome-devtools-i-kak-oni-pomogayut-v-te.md"
+   }
+  ]
+ },
+ "qad750f50b234": {
+  "q": "Что такое таблица принятия решений?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое таблица решений/decision table и как её можно использовать?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-tablica-reshenii-decision-table-i-kak-eyo-mozhno-ispolzovat.md"
+   }
+  ]
+ },
+ "qdbb252235984": {
+  "q": "Что такое Selenium WebDriver и как он работает?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое Selenium и зачем его используют?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/chto-takoe-selenium-i-zachem-ego-ispolzuyut.md"
+   }
+  ]
+ },
+ "q6242467e38d7": {
+  "q": "Как составить профиль нагрузки?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "На основе чего нужно составлять стратегию для проведения тестирования нагрузки?",
+    "path": "teoriya-ruchnogo-testirovaniya/na-osnove-chego-nuzhno-sostavlyat-strategiyu-dlya-provedeniya-testirovaniya-nagruzki.md"
+   }
+  ]
+ },
+ "q6c58f965cbb5": {
+  "q": "Что такое Agile? Какие у него ценности и принципы?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Agile",
+    "path": "sdlc-i-stlc/agile.md"
+   }
+  ]
+ },
+ "qf091f9253c2e": {
+  "q": "Что такое TDD и BDD?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Подходы к разработке/тестированию (... - driven development/testing)",
+    "path": "sdlc-i-stlc/podkhody-k-razrabotke-testirovaniyu-...-driven-development-testing.md"
+   }
+  ]
+ },
+ "q92b03026740e": {
+  "q": "Что такое чек-лист? Чем он отличается от тест-кейса?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Чек-лист (Check List)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/chek-list-check-list.md"
+   }
+  ]
+ },
+ "q6ec72a565752": {
+  "q": "Что такое flaky-тесты и как с ними бороться?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Flaky tests",
+    "path": "avtomatizaciya-testirovaniya/chto-takoe-flaky-tests.md"
+   }
+  ]
+ },
+ "q8b179ebf2b97": {
+  "q": "Как выбрать устройства для тестирования?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Покрытие девайсов",
+    "path": "mobilnoe-testirovanie/pokrytie-devaisov.md"
+   }
+  ]
+ },
+ "qdc87bed4dbd7": {
+  "q": "Посчитайте сумму цифр числа.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Сложите цифры целого числа.",
+    "path": "kodovye-zadachi/slozhite-cifry-celogo-chisla..md"
+   }
+  ]
+ },
+ "q694b3b78dc66": {
+  "q": "Для чего нужны модули os и sys?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Os и его методы",
+    "path": "osnovy-programmirovaniya-na-python/os-i-ego-metody.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Sys и его методы",
+    "path": "osnovy-programmirovaniya-na-python/sys-i-ego-metody.md"
+   }
+  ]
+ },
+ "q0718d199d777": {
+  "q": "Как работать с cookies и localStorage в UI-автотестах?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как взаимодействовать с cookies, LocalStorage и SessionStorage?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-vzaimodeistvovat-s-cookies-localstorage-i-sessionstorage.md"
+   }
+  ]
+ },
+ "q57284435fdfb": {
+  "q": "Как найти битые ссылки на странице?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как найти поврежденные ссылки в Selenium WebDriver?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-naiti-povrezhdennye-ssylki-v-selenium-webdriver.md"
+   }
+  ]
+ },
+ "q4f8d68246322": {
+  "q": "Что такое баг?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Дефекты и ошибки",
+    "path": "obshee/defekty-i-oshibki.md"
+   }
+  ]
+ },
+ "q4c6fb0204207": {
+  "q": "Что такое аннотации типов?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое type annotation?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-type-annotation.md"
+   }
+  ]
+ },
+ "q3f7f56b7939d": {
+  "q": "Как протестировать API регистрации пользователя?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Есть метод POST, который регистрирует нового пользователя на сайте, есть тело запроса, содержащее...",
+    "path": "prakticheskie-zadaniya/est-metod-post-kotoryi-registriruet-novogo-polzovatelya-na-saite-est-telo-zaprosa-soderzhashee....md"
+   }
+  ]
+ },
+ "q6a9b24afe5d4": {
+  "q": "Как устроен словарь? Какие требования к ключам?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как устроены множества и словари под капотом?",
+    "path": "osnovy-programmirovaniya-na-python/kak-ustroeny-mnozhestva-i-slovari-pod-kapotom.md"
+   }
+  ]
+ },
+ "qa2a03d3b84f0": {
+  "q": "Какие риски бывают в тестировании и что такое план их снижения?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какие виды рисков существуют? Что такое Mitigation Plan?",
+    "path": "teoriya-ruchnogo-testirovaniya/kakie-vidy-riskov-sushestvuyut-chto-takoe-mitigation-plan.md"
+   }
+  ]
+ },
+ "qdfff14c8d7e5": {
+  "q": "Что такое Scrum? Какие в нём роли, события и артефакты?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Расскажите о ритуалах, ценностях и ролях в Scrum.",
+    "path": "teoriya-ruchnogo-testirovaniya/rasskazhite-o-ritualakh-cennostyakh-i-rolyakh-v-scrum..md"
+   }
+  ]
+ },
+ "qca6f8a81f6e0": {
+  "q": "Чем отличаются нагрузочное, стрессовое и тестирование стабильности?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое load и stress testing? Какими инструментами пользуются для их выполнения?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-load-i-stress-testing-kakimi-instrumentami-polzuyutsya-dlya-ikh-vypolneniya.md"
+   }
+  ]
+ },
+ "q5f17e8972451": {
+  "q": "Какие инструменты нагрузочного тестирования вы знаете?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое load и stress testing? Какими инструментами пользуются для их выполнения?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-load-i-stress-testing-kakimi-instrumentami-polzuyutsya-dlya-ikh-vypolneniya.md"
+   }
+  ]
+ },
+ "qfc4da553204c": {
+  "q": "Что такое критерии входа и выхода в тестировании?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что может быть критериями запуска и завершения тестирования?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-mozhet-byt-kriteriyami-zapuska-i-zaversheniya-testirovaniya.md"
+   }
+  ]
+ },
+ "q97e5c2ebde8d": {
+  "q": "Какое соотношение позитивных и негативных тестов должно быть?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какое должно быть процентное соотношение между положительным и отрицательным тестированием на проект",
+    "path": "teoriya-ruchnogo-testirovaniya/kakoe-dolzhno-byt-procentnoe-sootnoshenie-mezhdu-polozhitelnym-i-otricatelnym-testirovaniem-na-proek.md"
+   }
+  ]
+ },
+ "qe4d582b5c4dd": {
+  "q": "Что такое регулярные выражения? Приведите пример.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое REgexp?",
+    "path": "teoriya-ruchnogo-testirovaniya/chto-takoe-regexp.md"
+   }
+  ]
+ },
+ "qe1bef6aab0e0": {
+  "q": "Как вы оцениваете трудозатраты на тестирование?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как провести эстимейт задачи? Каковы техники оценки объема тестирования существуют?",
+    "path": "teoriya-ruchnogo-testirovaniya/kak-provesti-estimeit-zadachi-kakovy-tekhniki-ocenki-obema-testirovaniya-sushestvuyut.md"
+   }
+  ]
+ },
+ "qb25db2dbe805": {
+  "q": "Какие паттерны проектирования используют в автотестах?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Наиболее распространенные шаблоны проектирования в тестировании",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/naibolee-rasprostranennye-shablony-proektirovaniya-v-testirovanii.md"
+   }
+  ]
+ },
+ "q3bd3068a79b1": {
+  "q": "Как работает assert в pytest? Что такое soft assert?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какое Главное Различие Между Командами ‘Assert’ и ‘Verify’, Soft и Hard Assert??",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/kakoe-glavnoe-razlichie-mezhdu-komandami-assert-i-verify-soft-i-hard-assert.md"
+   }
+  ]
+ },
+ "qdaf3c4a63664": {
+  "q": "Чем отличаются / и // в XPath?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "В Чём Различие “/” и “//”?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/v-chyom-razlichie-i.md"
+   }
+  ]
+ },
+ "q89c484e33d2f": {
+  "q": "Чем отличаются неявные и явные ожидания?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "В Чём Различие Между ‘Implicit wait’ и ‘Explicit wait’?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/v-chyom-razlichie-mezhdu-implicit-wait-i-explicit-wait.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Что такое Selenium Waits? Какие есть и чем отличаются?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/chto-takoe-selenium-waits-kakie-est-i-chem-otlichayutsya.md"
+   }
+  ]
+ },
+ "qd0bcf93572dc": {
+  "q": "Что такое Page Object?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое PageObject и PageFactory?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/obshie-voprosy/chto-takoe-pageobject-i-pagefactory.md"
+   }
+  ]
+ },
+ "qf49ca8916cc6": {
+  "q": "Как работать с alert'ами?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как обрабатывать браузерные сообщения (alerts)?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-obrabatyvat-brauzernye-soobsheniya-alerts.md"
+   }
+  ]
+ },
+ "q79de101bc947": {
+  "q": "Как перехватывать сетевые запросы в UI-автотестах?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как взаимодействовать с запросами, отправляемыми из браузера?",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/kak-vzaimodeistvovat-s-zaprosami-otpravlyaemymi-iz-brauzera.md"
+   }
+  ]
+ },
+ "q8de193d939d9": {
+  "q": "Для чего нужен execute_script?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Для чего используют JavaScriptExecutor? Приведите примеры.",
+    "path": "teoriya-avtomatizirovannogo-testirovaniya/selenium/dlya-chego-ispolzuyut-javascriptexecutor-privedite-primery..md"
+   }
+  ]
+ },
+ "qdda2f74687b3": {
+  "q": "Что такое инкапсуляция в Python? Что значат _ и __?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Модификаторы доступа в python",
+    "path": "osnovy-programmirovaniya-na-python/modifikatory-dostupa-v-python.md"
+   }
+  ]
+ },
+ "qdcdc081ddb09": {
+  "q": "Что такое @property?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Для чего нужно превращать метод класса в атрибут",
+    "path": "osnovy-programmirovaniya-na-python/dlya-chego-nuzhno-prevrashat-metod-klassa-v-atribut.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Сеттеры и геттеры",
+    "path": "osnovy-programmirovaniya-na-python/settery-i-gettery.md"
+   }
+  ]
+ },
+ "q2fefd22c74a7": {
+  "q": "Что такое DRY, KISS и YAGNI?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Принципы программирования",
+    "path": "osnovy-programmirovaniya-na-python/principy-programmirovaniya.md"
+   }
+  ]
+ },
+ "q13b81aab60e8": {
+  "q": "Что такое PEP 8?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое РЕР 8?",
+    "path": "osnovy-programmirovaniya-na-python/chto-takoe-rer-8.md"
+   }
+  ]
+ },
+ "q7d44bb13d12b": {
+  "q": "Что такое области видимости и правило LEGB?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Пространство имен",
+    "path": "osnovy-programmirovaniya-na-python/prostranstvo-imen.md"
+   }
+  ]
+ },
+ "q05c37f6539c2": {
+  "q": "Что такое lambda-функции?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Лямбда-функции",
+    "path": "osnovy-programmirovaniya-na-python/lyambda-funkcii.md"
+   }
+  ]
+ },
+ "qe553e27f06a9": {
+  "q": "Что такое хэширование и соль? Чем хэширование отличается от шифрования?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Хэш с солью",
+    "path": "web/khesh-s-solyu.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Как происходит шифрование?",
+    "path": "web/kak-proiskhodit-shifrovanie.md"
+   }
+  ]
+ },
+ "q10b5a1c50e8a": {
+  "q": "Что такое IP-адрес, порт и DNS?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Как работает DNS?",
+    "path": "web/kak-rabotaet-dns.md"
+   }
+  ]
+ },
+ "q935f0f17af0f": {
+  "q": "Чем отличаются WHERE и HAVING?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Операции фильтрации",
+    "path": "bazy-dannykh/operacii-filtracii.md"
+   }
+  ]
+ },
+ "qe61a7330b5b2": {
+  "q": "Как работают GROUP BY и агрегатные функции?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Операции группировки",
+    "path": "bazy-dannykh/operacii-gruppirovki.md"
+   },
+   {
+    "src": "qa_theory",
+    "title": "Операции агрегирования",
+    "path": "bazy-dannykh/operacii-agregirovaniya.md"
+   }
+  ]
+ },
+ "q498ed0264b37": {
+  "q": "Какие виды JOIN вы знаете? Чем они отличаются?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Операции объединения",
+    "path": "bazy-dannykh/operacii-obedineniya.md"
+   }
+  ]
+ },
+ "q9797e4399623": {
+  "q": "Что такое первичный и внешний ключ?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Для чего нужны PRIMARY KEY, FOREIGN KEY?",
+    "path": "bazy-dannykh/dlya-chego-nuzhny-primary-key-foreign-key.md"
+   }
+  ]
+ },
+ "qbceaa66175f9": {
+  "q": "Что должно быть в отчёте о прогоне автотестов?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Какую информацию должен содержать отчет о выполнении автоматических тестов?",
+    "path": "ci/kakuyu-informaciyu-dolzhen-soderzhat-otchet-o-vypolnenii-avtomaticheskikh-testov.md"
+   }
+  ]
+ },
+ "q52c39be34624": {
+  "q": "Как проверить расход батареи, памяти и трафика?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое утечки памяти? Как найти?",
+    "path": "mobile/chto-takoe-utechki-pamyati-kak-naiti.md"
+   }
+  ]
+ },
+ "qba0ba72ab2fb": {
+  "q": "Что такое режим разработчика и опция «Не сохранять действия»?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Что такое режим разработчика Do not keep activities?",
+    "path": "mobile/chto-takoe-rezhim-razrabotchika-do-not-keep-activities.md"
+   }
+  ]
+ },
+ "qb005a7fbde7d": {
+  "q": "Что такое Appium и как он устроен?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Объясните концепцию дизайна Appium",
+    "path": "mobile/obyasnite-koncepciyu-dizaina-appium.md"
+   }
+  ]
+ },
+ "q17da52535cd7": {
+  "q": "Как протестировать отправку файла в мессенджере?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Есть приложение типа мессенджера, пользователь заходит в чат и отсылает файл ...",
+    "path": "prakticheskie-zadaniya/est-prilozhenie-tipa-messendzhera-polzovatel-zakhodit-v-chat-i-otsylaet-fail-....md"
+   }
+  ]
+ },
+ "qf0ce88e63c4a": {
+  "q": "Что делать, если нет времени на полный регресс?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Вам нужно сделать Regression Testing за два дня. Как вы это сделаете, если Regression Run охватывает",
+    "path": "prakticheskie-zadaniya/vam-nuzhno-sdelat-regression-testing-za-dva-dnya.-kak-vy-eto-sdelaete-esli-regression-run-okhvatyvae.md"
+   }
+  ]
+ },
+ "qac5b30323744": {
+  "q": "Вы нажимаете «Войти», и ничего не происходит. Ваши действия?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Вы тестируете логин-форму, вводите логин и пароль, нажимаете кнопку логин и ничего не происходит...",
+    "path": "prakticheskie-zadaniya/vy-testiruete-login-formu-vvodite-login-i-parol-nazhimaete-knopku-login-i-nichego-ne-proiskhodit....md"
+   }
+  ]
+ },
+ "q4ef040da2215": {
+  "q": "Как протестировать банкомат с помощью диаграммы переходов состояний?",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Протестовать функционал банкомата с помощью техники State Transition Diagram.",
+    "path": "prakticheskie-zadaniya/protestovat-funkcional-bankomata-s-pomoshyu-tekhniki-state-transition-diagram..md"
+   }
+  ]
+ },
+ "qdbda0d92c77e": {
+  "q": "Напишите функцию для чисел Фибоначчи.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Последовательность Фиббоначи",
+    "path": "kodovye-zadachi/posledovatelnost-fibbonachi.md"
+   }
+  ]
+ },
+ "q58045ac6a5cd": {
+  "q": "Проверьте, есть ли в списке повторяющиеся элементы.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "Верните true, если любое значение встречается в массиве хотя бы дважды",
+    "path": "kodovye-zadachi/vernite-true-esli-lyuboe-znachenie-vstrechaetsya-v-massive-khotya-by-dvazhdy.md"
+   }
+  ]
+ },
+ "qec2e457b0662": {
+  "q": "Найдите число, которое встречается в списке один раз, если остальные — дважды.",
+  "sources": [
+   {
+    "src": "qa_theory",
+    "title": "В непустом массиве целых чисел nums каждый элемент встречается дважды, кроме одного. Найдите этот ед",
+    "path": "kodovye-zadachi/v-nepustom-massive-celykh-chisel-nums-kazhdyi-element-vstrechaetsya-dvazhdy-krome-odnogo.-naidite-et.md"
+   }
+  ]
+ },
+ "qd3f6bc17ceff": {
+  "q": "Что такое качество ПО? Какие характеристики качества вы знаете?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Качество ПО (Software Quality)",
+    "path": "obshee/kachestvo-po-software-quality.md"
+   }
+  ]
+ },
+ "q36f125e67af5": {
+  "q": "Что такое предугадывание ошибок?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Dynamic - Experience based",
+    "path": "test-dizain/dynamic-experience-based.md"
+   }
+  ]
+ },
+ "q920ec2a0de99": {
+  "q": "Что такое стратегия тестирования? Чем она отличается от тест-плана?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Стратегия тестирования (Test strategy)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/strategiya-testirovaniya-test-strategy.md"
+   }
+  ]
+ },
+ "q188917e120d1": {
+  "q": "Что такое тест-план и что в нём должно быть?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "План тестирования (Test plan)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/plan-testirovaniya-test-plan.md"
+   }
+  ]
+ },
+ "qb1ae97e1d6a1": {
+  "q": "Какие отчёты о тестировании вы готовите?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Виды отчетов (Reports)",
+    "path": "testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/vidy-otchetov-reports.md"
+   }
+  ]
+ },
+ "q00744b5cf2a2": {
+  "q": "Как протестировать письма от сервиса?",
+  "sources": [
+   {
+    "src": "qa_bible",
+    "title": "Тестирование электронных писем (E-mail)",
+    "path": "testirovanie-v-raznykh-sferakh-oblastyakh-testing-different-domains/testirovanie-elektronnykh-pisem-e-mail.md"
+   }
+  ]
+ }
+}

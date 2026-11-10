@@ -1,0 +1,403 @@
+/* Дизайн по мотивам Cluely: Geist, Signal Blue #3c83f6, тёмная полупрозрачная панель,
+   «пилюли» 9999px, карточки 12px, панель 16px. */
+:root {
+  --blue: #3c83f6;
+  --blue-hover: #81b6ff;
+  --blue-deep: #022c70;
+  --glass-a: 0.9;
+  --glass: rgba(24, 24, 27, var(--glass-a));
+  --glass-2: rgba(255, 255, 255, 0.06);
+  --glass-3: rgba(255, 255, 255, 0.1);
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --faint: #71717a;
+  --good: #34d399;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  --me: #c4b5fd;
+  --code: rgba(0, 0, 0, 0.45);
+  --fs: 14px;
+  --feed-max: 520px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: transparent; color: var(--text); }
+body {
+  font: var(--fs)/1.5 "Geist", -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, sans-serif;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+/* в обычном браузере — фон как у героя Cluely */
+html.browser body {
+  min-height: 100vh;
+  overflow: auto;
+  background: radial-gradient(120% 90% at 50% 0%, #73a8e8 0%, #1c38ea 55%, #0b1a6b 100%) fixed;
+}
+html.browser #app { margin: 28px auto; }
+
+.hidden { display: none !important; }
+button { font: inherit; color: inherit; }
+#app { width: 100%; padding: 6px 20px 30px; }  /* поля, чтобы тени не обрезались краем окна */
+html.browser #app { width: 760px; max-width: 100%; }
+
+kbd {
+  display: inline-grid; place-items: center; min-width: 18px; height: 18px; padding: 0 4px;
+  font: 500 11px/1 "Geist", -apple-system, sans-serif; color: var(--text);
+  background: var(--glass-3); border-radius: 4px; margin-left: 2px;
+}
+
+/* ===================== верхняя панель ===================== */
+.bar {
+  position: relative; z-index: 30; display: flex; align-items: center; gap: 6px;
+  height: 46px; padding: 0 6px 0 7px; margin: 0 auto 8px; width: fit-content; min-width: 470px;
+  background: var(--glass); border: 1px solid var(--line); border-radius: 9999px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+}
+.spacer { flex: 1; min-width: 16px; align-self: stretch; cursor: grab; }
+body.dragging, body.dragging * { cursor: grabbing !important; user-select: none !important; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 13px;
+  border-radius: 9999px; border: 0; cursor: pointer; white-space: nowrap;
+  font-size: 13px; font-weight: 500; text-decoration: none; color: var(--text);
+  transition: background .15s, box-shadow .15s;
+}
+.pill.small { height: 28px; font-size: 12px; padding: 0 11px; }
+.pill.ghost { background: transparent; }
+.pill.ghost:hover { background: var(--glass-3); }
+.pill.primary, .listen {
+  background: var(--blue); color: #fff;
+}
+.pill.primary:hover, .listen:hover {
+  box-shadow: 0 0 0 0.5px #0544a9, inset 0 -1px 0 0 var(--blue-deep), inset 0 0.5px 0 0 var(--blue-hover);
+}
+
+.listen .rec-dot, .listen .wave, .listen .timer { display: none; }
+.listen.on { background: rgba(248, 113, 113, 0.16); color: #fecaca; }
+.listen.on:hover { box-shadow: none; background: rgba(248, 113, 113, 0.24); }
+.listen.on .rec-dot { display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--bad); animation: pulse 1.4s infinite; }
+.listen.on .wave { display: inline-flex; align-items: center; gap: 2px; height: 16px; }
+.listen.on .timer { display: inline; font: 500 12px "Geist Mono", ui-monospace, monospace; color: #fca5a5; }
+.wave i { display: block; width: 2px; height: 3px; border-radius: 1px; background: #fca5a5; transition: height .12s; }
+@keyframes pulse { 50% { opacity: .35; } }
+
+.icon-btn {
+  position: relative; display: grid; place-items: center; width: 32px; height: 32px;
+  border: 0; border-radius: 50%; background: transparent; cursor: pointer; fill: var(--text);
+}
+.icon-btn:hover { background: var(--glass-3); }
+.dot { position: absolute; top: 5px; right: 5px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+
+.menu {
+  position: absolute; top: 50px; right: 0; z-index: 20; min-width: 230px; padding: 6px;
+  background: rgba(24, 24, 27, 0.97); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+.menu button {
+  display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 10px; text-align: left;
+  background: none; border: 0; border-radius: 8px; cursor: pointer; font-size: 13px;
+}
+.menu button:hover { background: var(--glass-3); }
+.menu hr { border: 0; border-top: 1px solid var(--line); margin: 4px 0; }
+.danger-text { color: var(--bad) !important; }
+.badge { margin-left: auto; background: var(--blue); color: #fff; border-radius: 9999px; padding: 0 7px; font-size: 11px; font-weight: 600; }
+
+/* ===================== основная панель ===================== */
+.panel {
+  background: var(--glass); border: 1px solid var(--line); border-radius: 16px; padding: 12px;
+  box-shadow: 0 0 0 1px rgba(207, 226, 255, 0.06), 0 18px 48px rgba(0, 0, 0, 0.4), inset 0 0.5px 0 rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+}
+.view { display: none; }
+.view.active { display: block; }
+.view-head { display: flex; align-items: center; gap: 8px; margin: -2px 0 10px; }
+.view-head h2 { font-size: 15px; font-weight: 600; margin: 0; flex: 1; letter-spacing: -0.01em; }
+.back { width: 28px; height: 28px; border-radius: 50%; border: 0; background: var(--glass-2); cursor: pointer; }
+.back:hover { background: var(--glass-3); }
+.caption { text-transform: uppercase; letter-spacing: .15em; font-size: 10.5px; color: var(--faint); margin: 12px 0 2px; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+
+/* --- живая расшифровка --- */
+.live-strip { background: var(--glass-2); border-radius: 12px; padding: 8px 10px; margin-bottom: 10px; }
+.live-head { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--faint); }
+.live-head .lbl { text-transform: uppercase; letter-spacing: .15em; }
+.meter { display: inline-flex; align-items: center; gap: 4px; }
+.who-i { color: var(--blue-hover); font-weight: 600; }
+.who-m { color: var(--me); font-weight: 600; }
+.bar-m { width: 44px; height: 4px; background: var(--glass-3); border-radius: 2px; overflow: hidden; }
+.bar-m i { display: block; height: 100%; width: 0; background: var(--blue); transition: width .12s; }
+#lvlMe { background: var(--me); }
+.link { margin-left: auto; background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 11px; }
+.link:hover { color: var(--text); }
+.transcript { font-size: 12.5px; color: var(--muted); margin-top: 4px; overflow-y: auto; max-height: 160px; }
+.transcript.collapsed { max-height: 42px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+.line { margin: 1px 0; }
+.line .who { color: var(--blue-hover); font-weight: 500; margin-right: 4px; }
+.line.me .who { color: var(--me); }
+.line.interim { opacity: .65; }
+.pending { margin-top: 6px; font-size: 12.5px; padding: 5px 8px; border-radius: 8px; background: rgba(251, 191, 36, 0.1); color: #fde68a; }
+.pending::before { content: "Слышу: "; font-weight: 600; }
+.line.is-q { color: var(--text); }
+.line.is-q .who::before { content: "❓ "; }
+.line.is-ctx { opacity: .55; }
+
+.actions-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.chip {
+  height: 28px; padding: 0 11px; border-radius: 9999px; border: 1px solid var(--line);
+  background: var(--glass-2); cursor: pointer; font-size: 12.5px; font-weight: 500; white-space: nowrap;
+}
+.chip:hover { background: var(--glass-3); border-color: rgba(60, 131, 246, 0.5); }
+.chip.clear { margin-left: auto; color: var(--muted); }
+.chip.clear:hover { color: var(--text); border-color: rgba(248, 113, 113, 0.5); }
+
+/* --- лента ответов --- */
+.feed { display: flex; flex-direction: column; gap: 8px; max-height: var(--feed-max); overflow-y: auto; scroll-behavior: smooth; }
+.feed:empty { display: none; }
+.feed.tall { max-height: calc(var(--feed-max) + 160px); }
+.feed-inner { display: flex; flex-direction: column; gap: 8px; }
+.feed::-webkit-scrollbar { width: 6px; }
+.feed::-webkit-scrollbar-thumb { background: var(--glass-3); border-radius: 3px; }
+
+.card { background: var(--glass-2); border: 1px solid transparent; border-radius: 12px; padding: 10px 12px; }
+.card.streaming { border-color: rgba(60, 131, 246, 0.55); }
+.card.saved { box-shadow: inset 2px 0 0 var(--warn); }
+.card .head { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 4px; }
+.card .head .spark { color: var(--blue); }
+.card .q { font-weight: 600; font-size: 1.02em; margin-bottom: 4px; letter-spacing: -0.01em; }
+.card .actions { display: flex; gap: 4px; margin-top: 6px; align-items: center; }
+.card .actions button { height: 24px; padding: 0 8px; border-radius: 6px; border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; }
+.card .actions button:hover { background: var(--glass-3); color: var(--text); }
+.card .actions .on { color: var(--warn); }
+.card .tags { margin-left: auto; color: var(--faint); font-size: 11px; }
+.card .notes-view { margin-top: 6px; padding: 6px 9px; background: rgba(60, 131, 246, 0.1); border-radius: 8px; font-size: 0.93em; white-space: pre-wrap; }
+.card .notes-view::before { content: "📝 "; }
+.edit-grid { display: grid; gap: 6px; }
+
+/* --- markdown --- */
+.md p { margin: 0.3em 0; }
+.md ul, .md ol { margin: 0.25em 0; padding-left: 1.25em; }
+.md li { margin: 0.12em 0; }
+.md li::marker { color: var(--faint); }
+.md strong { color: #fff; font-weight: 600; }
+.md h2, .md h3, .md h4 { margin: 0.8em 0 0.25em; font-size: 1.04em; font-weight: 600; }
+.md code { background: var(--code); padding: 1px 5px; border-radius: 4px; font: 0.88em "Geist Mono", ui-monospace, Menlo, monospace; }
+.md pre { position: relative; background: var(--code); padding: 9px 11px; border-radius: 8px; overflow-x: auto; margin: 0.45em 0; }
+.md pre code { background: none; padding: 0; display: block; white-space: pre; font-size: 0.86em; line-height: 1.55; }
+.md pre .copy { position: absolute; top: 5px; right: 5px; height: 22px; padding: 0 7px; border: 0; border-radius: 5px; background: var(--glass-3); cursor: pointer; font-size: 11px; color: var(--muted); }
+.md-table { overflow-x: auto; margin: 0.45em 0; }
+.md table { border-collapse: collapse; width: 100%; font-size: 0.92em; }
+.md th, .md td { padding: 5px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.md th { color: var(--muted); font-weight: 600; font-size: 0.92em; background: var(--glass-2); }
+.md tr:last-child td { border-bottom: 0; }
+.cursor::after { content: ""; display: inline-block; width: 7px; height: 1em; margin-left: 2px; vertical-align: -2px; background: var(--blue); animation: pulse 1s steps(2) infinite; }
+
+/* --- поле ввода (как в Cluely) --- */
+.ask { position: relative; margin-top: 10px; }
+.ask input {
+  height: 40px; padding: 0 46px 0 14px; border-radius: 12px;
+  box-shadow: inset 0 2px 20px -1px rgba(0, 0, 0, 0.05);
+}
+.send {
+  position: absolute; right: 5px; top: 5px; width: 30px; height: 30px; border-radius: 50%; border: 0;
+  display: grid; place-items: center; background: var(--blue); color: #fff; cursor: pointer;
+}
+.send:hover { background: #5294ff; }
+
+/* --- глубина размышлений Claude: ползунок, как в самом Claude --- */
+.ask.has-effort input { padding-right: 128px; }
+.effort-chip {
+  position: absolute; right: 42px; top: 7px; height: 26px; padding: 0 10px; border: 0; border-radius: 9999px;
+  background: var(--glass-2); color: var(--muted); font-size: 12px; cursor: pointer; white-space: nowrap;
+}
+.effort-chip:hover { background: var(--glass-3); color: var(--text); }
+.effort { display: grid; gap: 4px; padding: 9px 12px 10px; background: var(--glass-2); border-radius: 12px; }
+.ask-effort { margin-top: 6px; }
+.effort-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 12.5px; color: var(--muted); }
+.effort-head b { color: var(--text); font-weight: 600; }
+.effort-ticks { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--faint); margin-top: -2px; }
+.effort-hint { color: var(--muted); font-size: 11.5px; line-height: 1.35; }
+.effort.is-slow .effort-hint { color: var(--warn); }
+
+/* --- поля --- */
+input, textarea, select {
+  width: 100%; background: rgba(0, 0, 0, 0.28); color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 13px;
+}
+input::placeholder, textarea::placeholder { color: var(--faint); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--blue); }
+input[type=range] { padding: 0; accent-color: var(--blue); background: none; border: 0; }
+input[type=checkbox] { width: auto; accent-color: var(--blue); }
+.row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+.toggle { display: inline-flex; gap: 5px; align-items: center; font-size: 12px; color: var(--muted); white-space: nowrap; cursor: pointer; }
+
+.settings { display: flex; flex-direction: column; gap: 9px; padding-right: 2px; }
+.settings label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.settings label.check { flex-direction: row; align-items: center; gap: 8px; }
+.settings small { color: var(--faint); font-size: 11.5px; }
+.warn { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.4); color: #fde68a; padding: 8px 10px; border-radius: 8px; font-size: 12.5px; }
+
+/* --- заучивание --- */
+.study .progress { color: var(--faint); font-size: 11.5px; margin-bottom: 8px; }
+.study .question { font-size: 1.15em; font-weight: 600; padding: 16px 14px; background: var(--glass-2); border-radius: 12px; letter-spacing: -0.01em; }
+.study .hint { color: var(--muted); text-align: center; font-size: 12.5px; margin: 12px 0; }
+.study .reveal { margin-top: 10px; max-height: calc(var(--feed-max) - 40px); overflow-y: auto; }
+.grades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; }
+.grades .pill { justify-content: center; background: var(--glass-2); border: 1px solid var(--line); }
+.grades .g-again:hover { border-color: var(--bad); }
+.grades .g-hard:hover { border-color: var(--warn); }
+.grades .g-good:hover { border-color: var(--good); }
+.center { display: flex; justify-content: center; margin-top: 10px; }
+.empty { color: var(--muted); text-align: center; padding: 22px 10px; font-size: 13px; line-height: 1.6; }
+
+/* --- разборы --- */
+.list { display: flex; flex-direction: column; gap: 6px; max-height: var(--feed-max); overflow-y: auto; }
+.session-row { display: flex; gap: 8px; align-items: center; padding: 10px 12px; background: var(--glass-2); border-radius: 10px; cursor: pointer; font-size: 13px; }
+.session-row:hover { background: var(--glass-3); }
+.session-row .meta { color: var(--faint); font-size: 11.5px; margin-left: auto; }
+.review { background: var(--glass-2); border-radius: 12px; padding: 4px 12px; }
+.review:empty { display: none; }
+.details { font-size: 12.5px; color: var(--muted); }
+.details summary { cursor: pointer; padding: 4px 0; }
+.details pre { white-space: pre-wrap; font: inherit; }
+
+/* --- вход через Claude --- */
+.login { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 22px 16px 14px; }
+.login .logo-img {
+  position: relative; isolation: isolate; display: block; width: 80px; height: 80px; margin-bottom: -4px;
+  border-radius: 22.45%;                                   /* как у плитки: тень повторяет её форму */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.38), 0 1px 3px rgba(0, 0, 0, 0.3);   /* нейтральная тень, без синевы */
+}
+/* Подсветка при наведении — отдельный круглый ореол за знаком (без фильтров: WebKit их размывает) */
+.login .logo-img::before {
+  content: ""; position: absolute; inset: -30px; z-index: -1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 150, 255, 0.75) 0%, rgba(60, 131, 246, 0.3) 45%, rgba(60, 131, 246, 0) 70%);
+  opacity: 0; transition: opacity .25s ease;
+}
+.login .logo-img:hover::before, .login .logo-img.hover::before { opacity: 1; }
+.logo-img svg, .bar-logo svg { display: block; width: 100%; height: 100%; }
+/* Словесный знак: «Lakon» белым, «IQ» фирменным градиентом */
+.brand { font-weight: 650; letter-spacing: -0.03em; }
+.brand span {
+  background: linear-gradient(135deg, #86b0ff 0%, #3c83f6 55%, #6d7cff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.login h2.brand { font-size: 26px; }
+.bar-logo {
+  position: relative; isolation: isolate; width: 22px; height: 22px; margin: 0 2px 0 6px; flex: none;
+  -webkit-user-drag: none; user-select: none;
+}
+.bar-logo::before {  /* подсветка при наведении — мягкий круглый ореол */
+  content: ""; position: absolute; inset: -9px; z-index: -1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(134, 176, 255, 0.6) 0%, rgba(60, 131, 246, 0.22) 45%, rgba(60, 131, 246, 0) 70%);
+  opacity: 0; transition: opacity .2s ease;
+}
+.bar-logo:hover::before, .bar-logo.hover::before { opacity: 1; }
+.login h2 { margin: 4px 0 0; font-size: 20px; font-weight: 600; letter-spacing: -0.018em; }
+.login p { margin: 0; font-size: 13px; line-height: 1.55; }
+.pill.big { height: 40px; padding: 0 22px; font-size: 14px; margin-top: 6px; }
+.pill:disabled { opacity: .5; cursor: default; box-shadow: none; }
+.wait { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.wait .link { margin-left: 4px; font-size: 12px; text-decoration: underline; }
+.spinner { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--glass-3); border-top-color: var(--blue); animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.login-error { color: #fca5a5 !important; }
+.account { padding: 6px 10px 2px; font-size: 11.5px; color: var(--faint); }
+body.locked .bar .pill, body.locked .menu [data-view] { opacity: .45; pointer-events: none; }
+
+/* --- экран авторизации --- */
+.login-scroll { gap: 0; }
+.login-scroll .login { padding: 14px 16px 10px; }
+.login-scroll .caption { margin: 14px 2px 6px; }
+#loginBanner { margin-top: 4px; }
+.continue {
+  display: flex; align-items: center; gap: 10px; width: 100%; margin-top: 10px; padding: 12px 14px;
+  border: 0; border-radius: 12px; cursor: pointer; text-align: left; color: #fff;
+  background: var(--blue); box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.35);
+}
+.continue:hover { box-shadow: 0 0 0 0.5px #0544a9, inset 0 -1px 0 0 var(--blue-deep), inset 0 0.5px 0 0 var(--blue-hover); }
+.continue .c-txt { flex: 1; display: flex; flex-direction: column; }
+.continue b { font-weight: 600; font-size: 14px; }
+.continue small { opacity: .85; font-size: 12px; }
+.continue kbd { background: rgba(255, 255, 255, 0.2); }
+
+.signin-list { display: flex; flex-direction: column; gap: 6px; }
+.signin { background: var(--glass-2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.signin-btn {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 12px;
+  background: none; border: 0; cursor: pointer; text-align: left;
+}
+.signin-btn:hover:not(:disabled) { background: var(--glass-2); }
+.signin-btn:disabled { cursor: default; }
+.ico {
+  width: 34px; height: 34px; flex: none; display: grid; place-items: center; border-radius: 10px;
+  font-weight: 700; font-size: 16px; color: #fff; background: var(--glass-3);
+}
+.ico-gemini { background: conic-gradient(from 210deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4); }
+.ico-openrouter { background: linear-gradient(135deg, #6467f2, #3c83f6); }
+.ico-groq { background: linear-gradient(135deg, #f55036, #f79336); }
+.ico-claude { background: linear-gradient(135deg, #d97757, #c15f3c); }
+.s-txt { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.s-txt b { font-weight: 600; font-size: 13.5px; letter-spacing: -0.01em; }
+.s-txt small { color: var(--muted); font-size: 12px; }
+.s-st { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+.s-st.on { color: var(--good); }
+.s-flow { padding: 2px 12px 12px 58px; font-size: 12.5px; }
+.steps { margin: 0 0 8px; padding-left: 1.2em; color: var(--text); }
+.steps li { margin: 3px 0; }
+.flow-line { display: flex; align-items: center; gap: 8px; color: var(--muted); flex-wrap: wrap; }
+.flow-line.ok { color: var(--good); }
+.flow-line .link { font-size: 12px; text-decoration: underline; margin-left: 0; }
+.key-row { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.key-row input { flex: 1; }
+
+.key-login { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+.key-login summary { cursor: pointer; color: var(--muted); font-size: 12.5px; padding: 4px 2px; }
+.key-login summary:hover { color: var(--text); }
+.key-form { display: flex; flex-direction: column; gap: 6px; padding: 8px 2px 2px; }
+.key-form .key-row { margin-top: 0; }
+.key-form a { color: var(--blue-hover); text-decoration: none; }
+
+/* --- выбор ИИ-провайдера --- */
+.providers { gap: 6px; }
+.prov { background: var(--glass-2); border: 1px solid transparent; border-radius: 12px; overflow: hidden; }
+.prov.current { border-color: rgba(60, 131, 246, 0.55); }
+.prov-head { display: flex; align-items: center; gap: 8px; padding: 10px 12px; cursor: pointer; }
+.prov-head:hover { background: var(--glass-2); }
+.prov-name { font-weight: 600; font-size: 13.5px; }
+.prov-badge { font-size: 11px; color: var(--blue-hover); background: rgba(60, 131, 246, 0.12); padding: 2px 8px; border-radius: 9999px; }
+.st { font-size: 11px; color: var(--muted); }
+.st.on { color: var(--good); }
+.chev { margin-left: auto; color: var(--faint); transition: transform .15s; }
+.prov.open .chev { transform: rotate(90deg); }
+.prov-body { display: none; padding: 0 12px 12px; }
+.prov.open .prov-body { display: block; }
+.prov-body p { margin: 0 0 8px; }
+.prov-body a { color: var(--blue-hover); text-decoration: none; }
+.prov-body a:hover { text-decoration: underline; }
+.prov-actions { display: flex; gap: 6px; align-items: center; }
+.prov-actions input { flex: 1; }
+.ai-row { display: flex; gap: 6px; align-items: center; }
+.ai-row select { flex: 1; }
+.ai-name { font-weight: 600; font-size: 13px; white-space: nowrap; }
+
+/* --- горячие клавиши --- */
+.keys { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+.key-row { display: flex; align-items: center; gap: 10px; padding: 7px 10px; background: var(--glass-2); border-radius: 8px; font-size: 13px; }
+.key-row .combo { min-width: 92px; display: inline-flex; gap: 2px; }
+
+/* --- уведомления --- */
+.toast {
+  position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 50; max-width: 90%;
+  padding: 7px 14px; border-radius: 9999px; font-size: 12.5px;
+  background: rgba(127, 29, 29, 0.95); border: 1px solid rgba(248, 113, 113, 0.5); color: #fee2e2;
+}
+.toast.ok { background: rgba(24, 24, 27, 0.95); border-color: rgba(60, 131, 246, 0.6); color: var(--text); }
+.toast-btn { margin-left: 10px; background: none; border: 0; padding: 0; color: var(--blue-hover); font: inherit;
+  font-weight: 600; cursor: pointer; text-decoration: underline; }
+
+/* --- банк ответов: выбор темы --- */
+.bank-cat { width: auto; flex: none; max-width: 210px; padding: 6px 8px; font-size: 12.5px; }

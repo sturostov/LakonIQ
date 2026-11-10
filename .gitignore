@@ -1,0 +1,24 @@
+.venv/
+.env
+data/
+__pycache__/
+*.pyc
+.playwright-mcp/
+native/bin/
+build/
+dist/
+.DS_Store
+.idea/
+.pytest_cache/
+*.bak*
+*.log
+# личные данные и ключи — никогда в git
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+kb/qa_kb*.json
+kb/sources/
+kb/last_batch.json

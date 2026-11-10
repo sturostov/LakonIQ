@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LakonIQ</title>
+  <link rel="icon" type="image/svg+xml" href="/static/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== Плавающая панель управления ===== -->
+  <div class="bar">
+    <span class="bar-logo" data-svg="/static/mark.svg" title="LakonIQ"></span>
+    <button id="btnListen" class="pill listen" title="Начать / остановить прослушивание (⌘⇧L)">
+      <span class="rec-dot"></span>
+      <span class="wave"><i></i><i></i><i></i><i></i><i></i></span>
+      <span id="listenLabel">Слушать</span>
+      <span id="timer" class="timer hidden">00:00</span>
+    </button>
+    <button id="btnAssist" class="pill ghost" title="Подсказка: ответ на последний вопрос или анализ экрана и разговора">
+      Подсказка <kbd>⌘</kbd><kbd>↵</kbd>
+    </button>
+    <button id="btnHide" class="pill ghost" title="Показать / скрыть окно">
+      Скрыть <kbd>⌘</kbd><kbd>\</kbd>
+    </button>
+    <span class="spacer"></span>
+    <button id="btnMenu" class="icon-btn" title="Меню">
+      <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
+      <span id="dueDot" class="dot hidden"></span>
+    </button>
+    <div id="menu" class="menu hidden">
+      <button data-view="base"><span>📚</span>База ответов</button>
+      <button data-view="study"><span>🧠</span>Заучивание <span id="dueBadge" class="badge hidden"></span></button>
+      <button data-view="sessions"><span>🗂</span>Разборы интервью</button>
+      <button data-view="settings"><span>⚙️</span>Настройки</button>
+      <button data-view="keys"><span>⌨️</span>Горячие клавиши</button>
+      <hr>
+      <div id="accountLine" class="account hidden"></div>
+      <button id="btnSwitch" class="always"><span>🔄</span>Сменить способ входа</button>
+      <button id="btnLogout" class="always"><span>↩︎</span>Выйти</button>
+      <button id="btnQuit" class="danger-text always"><span>⏻</span>Закрыть приложение</button>
+    </div>
+  </div>
+
+  <!-- ===== Основная панель ===== -->
+  <main id="panel" class="panel">
+
+    <!-- ---------- Авторизация (первый экран при запуске) ---------- -->
+    <section id="view-login" class="view">
+      <div class="feed tall login-scroll">
+        <div class="login">
+          <span class="logo-img" data-svg="/static/logo-tile.svg"></span>
+          <h2 class="brand">Lakon<span>IQ</span></h2>
+          <p class="muted">Войди через аккаунт, который у тебя уже есть — ключи копировать не нужно.</p>
+        </div>
+
+        <div id="loginBanner" class="warn hidden"></div>
+
+        <button id="btnContinue" class="continue hidden">
+          <span class="c-txt"><b>Продолжить</b><small id="continueAs"></small></span>
+          <kbd>↵</kbd>
+        </button>
+
+        <div class="caption">Войти через аккаунт</div>
+        <div id="accountList" class="signin-list"></div>
+
+        <details id="keyLogin" class="key-login">
+          <summary>Войти по API-ключу</summary>
+          <div class="key-form">
+            <select id="keyProvider"></select>
+            <div class="key-row">
+              <input id="keyInput" type="password" autocomplete="off" placeholder="Вставь API-ключ">
+              <button id="keySubmit" class="pill primary small">Войти</button>
+            </div>
+            <p id="keyNote" class="muted small"></p>
+            <p id="keyError" class="login-error small hidden"></p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ---------- Живой режим ---------- -->
+    <section id="view-live" class="view active">
+      <div id="liveStrip" class="live-strip hidden">
+        <div class="live-head">
+          <span class="lbl">Расшифровка <span id="sttLabel"></span></span>
+          <span class="meter" title="Интервьюер"><span class="who-i">И</span><span class="bar-m"><i id="lvlInterviewer"></i></span></span>
+          <span class="meter" title="Я"><span class="who-m">Я</span><span class="bar-m"><i id="lvlMe"></i></span></span>
+          <button id="btnTranscript" class="link">развернуть</button>
+        </div>
+        <div id="transcript" class="transcript collapsed"></div>
+        <div id="pending" class="pending hidden"></div>
+      </div>
+
+      <div class="actions-row">
+        <button class="chip" data-action="assist">✨&nbsp; Что сказать?</button>
+        <button class="chip" data-action="followups">💬&nbsp; Уточняющие вопросы</button>
+        <button class="chip" data-action="recap">📋&nbsp; Кратко</button>
+        <button class="chip" data-action="screenshot">📷&nbsp; Задача с экрана</button>
+        <button id="btnClear" class="chip clear hidden"
+          title="Убрать готовые ответы с экрана. Недописанные остаются, контекст сохраняется, ответы остаются в Базе">🧹&nbsp; Очистить</button>
+      </div>
+
+      <div id="answers" class="feed"></div>
+
+      <form id="askForm" class="ask">
+        <input id="askInput" placeholder="Спроси о чём угодно или ⌘↵ для подсказки" autocomplete="off">
+        <button type="button" id="effortChip" class="effort-chip hidden" title="Глубина размышлений Claude"></button>
+        <button class="send" title="Отправить" type="submit">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <div id="effortPanel" class="effort ask-effort hidden"></div>
+    </section>
+
+    <!-- ---------- База ---------- -->
+    <section id="view-base" class="view">
+      <header class="view-head"><button class="back">←</button><h2>База ответов</h2>
+        <a class="pill ghost small" href="/api/export.md" download>⬇ Экспорт .md</a></header>
+      <div class="row">
+        <input id="baseSearch" placeholder="Поиск по вопросам, ответам, заметкам, тегам">
+        <label class="toggle"><input type="checkbox" id="baseSavedOnly" checked><span>только ★</span></label>
+        <label class="toggle" title="Готовые ответы на вопросы с собеседований QA"><input type="checkbox" id="baseBank"><span>📚 банк QA</span></label>
+        <select id="bankCat" class="bank-cat hidden" title="Тема"></select>
+      </div>
+      <div id="baseList" class="feed tall"></div>
+    </section>
+
+    <!-- ---------- Заучивание ---------- -->
+    <section id="view-study" class="view">
+      <header class="view-head"><button class="back">←</button><h2>Заучивание</h2></header>
+      <div id="studyCard" class="study"></div>
+    </section>
+
+    <!-- ---------- Разборы ---------- -->
+    <section id="view-sessions" class="view">
+      <header class="view-head"><button class="back">←</button><h2 id="sessionsTitle">Разборы интервью</h2>
+        <button id="sessionReview" class="pill primary small hidden">🧠 Сделать разбор</button></header>
+      <div id="sessionList" class="list"></div>
+      <div id="sessionView" class="hidden feed tall">
+        <div id="sessionReviewText" class="md review"></div>
+        <details class="details"><summary>Полная расшифровка</summary><pre id="sessionTranscript"></pre></details>
+        <div class="caption">Вопросы этой сессии</div>
+        <div id="sessionQa" class="feed-inner"></div>
+      </div>
+    </section>
+
+    <!-- ---------- Горячие клавиши ---------- -->
+    <section id="view-keys" class="view">
+      <header class="view-head"><button class="back">←</button><h2>Горячие клавиши</h2></header>
+      <div id="keysList" class="keys"></div>
+      <p class="muted small">Работают глобально, из любого приложения. Если не срабатывают — разреши «Универсальный доступ»
+        и «Мониторинг ввода» для Терминала/PyCharm в Системных настройках → Конфиденциальность и безопасность, затем перезапусти.</p>
+    </section>
+
+    <!-- ---------- Настройки ---------- -->
+    <section id="view-settings" class="view">
+      <header class="view-head"><button class="back">←</button><h2>Настройки</h2></header>
+      <form id="settingsForm" class="settings feed tall">
+        <div id="keyWarn" class="warn hidden"></div>
+        <div class="caption">ИИ-модель</div>
+        <div class="ai-row">
+          <span id="aiName" class="ai-name">—</span>
+          <select id="aiModel" title="Модель"></select>
+          <button type="button" id="btnChangeAi" class="pill ghost small">Сменить</button>
+        </div>
+        <div id="effortBox" class="effort hidden"></div>
+        <div class="caption">Звук</div>
+        <label>Интервьюер (звук созвона)
+          <select name="interviewer_device"></select>
+          <small>«Звук системы» слышит всё, что играет в наушниках: Zoom, Meet, Teams, браузер. Настраивать ничего не нужно. BlackHole — запасной вариант.</small>
+        </label>
+        <label>Мой микрофон (необязательно)
+          <select name="me_device"></select>
+          <small>Чтобы в расшифровке и разборе были твои ответы. В наушниках микрофон не слышит интервьюера — расшифровка чистая.</small>
+        </label>
+        <label>Язык собеседования
+          <select name="language">
+            <option value="ru">Русский</option>
+            <option value="en">Английский</option>
+            <option value="multi">Смешанный (рус + англ)</option>
+          </select>
+        </label>
+        <div class="caption">Распознавание речи</div>
+        <label>Сервис
+          <select name="stt">
+            <option value="auto">Автоматически (Deepgram, если есть ключ, иначе Groq)</option>
+            <option value="groq">Groq Whisper — бесплатно, ключ Groq</option>
+            <option value="deepgram">Deepgram — быстрее, $200 бесплатно при регистрации</option>
+          </select>
+          <small id="sttStatus"></small>
+        </label>
+        <label>Ключ Deepgram <small>— необязательно</small>
+          <input name="deepgram_key" type="password" autocomplete="off" placeholder="Вставь ключ с console.deepgram.com">
+        </label>
+        <div class="caption">Профиль</div>
+        <label>Роль / позиция<input name="role" placeholder="Например: Python backend-разработчик, Senior"></label>
+        <label>Резюме <small>— ответы про опыт будут опираться на него</small><textarea name="resume" rows="6"></textarea></label>
+        <label>Вакансия <small>— требования и стек компании</small><textarea name="vacancy" rows="4"></textarea></label>
+        <label>Пожелания к ответам<textarea name="extra" rows="2" placeholder="Например: короче; примеры на Django"></textarea></label>
+        <label>Стиль ответов
+          <select name="answer_style">
+            <option value="live">Живая речь — как человек говорит вслух (рекомендуется)</option>
+            <option value="strict">Чётко и по делу — определения и подробности</option>
+          </select>
+        </label>
+        <label>Подробность ответов
+          <select name="answer_depth">
+            <option value="auto">По типу вопроса — базовые раскрываю с примером, уточнения коротко (рекомендуется)</option>
+            <option value="short">Коротко — 2–3 фразы</option>
+            <option value="full">Подробно — с примером, компромиссами и подводными камнями</option>
+          </select>
+        </label>
+        <label>Как я говорю <small>— необязательно; ответы подстроятся под твою манеру</small>
+          <textarea name="my_voice" rows="3" placeholder="Вставь пару своих фраз так, как ты обычно говоришь. Например: «Ну смотрите, я обычно сначала гляну логи, а потом уже лезу в код…». Если включён «Мой микрофон», приложение подстроится само по твоей речи."></textarea>
+        </label>
+        <div class="caption">Поведение</div>
+        <label class="check"><input type="checkbox" name="auto_answer"> Отвечать автоматически, когда интервьюер договорил</label>
+        <label class="check"><input type="checkbox" name="smart_filter"> Только на вопросы и задания — приветствия, реакции и рассказ о компании уходят в контекст</label>
+        <label class="check"><input type="checkbox" name="auto_save"> Сразу добавлять все ответы в базу ★</label>
+        <label class="check"><input type="checkbox" name="kb_answers"> Сначала искать в банке ответов — если вопрос оттуда, ответ появится мгновенно, без запроса к ИИ</label>
+        <div class="caption">Окно</div>
+        <label class="check"><input type="checkbox" id="onTop" checked> Поверх всех окон</label>
+        <label>Непрозрачность панели<input type="range" id="opacity" min="0.55" max="1" step="0.05" value="0.9"></label>
+        <label>Размер текста<input type="range" id="fontSize" min="12" max="20" step="1" value="14"></label>
+        <button class="pill primary" type="submit">Сохранить</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
