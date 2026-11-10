@@ -150,6 +150,27 @@
            background: radial-gradient(80% 120% at 50% 0%, rgba(60, 131, 246, .45), rgba(11, 26, 107, .5) 60%, rgba(7, 11, 31, .2));
            border: 1px solid rgba(91, 155, 255, .25); }
   .final img.logo { width: 76px; height: 76px; margin: 0 auto 18px; filter: drop-shadow(0 12px 30px rgba(32, 51, 220, .6)); }
+  /* поддержать проект */
+  .donate { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; padding: 44px 48px; border-radius: 28px;
+            background: linear-gradient(135deg, rgba(38, 161, 123, .16), rgba(60, 131, 246, .10) 60%, rgba(255, 255, 255, .02));
+            border: 1px solid rgba(52, 211, 153, .26); }
+  .donate h2 { font-size: clamp(26px, 3.4vw, 38px); }
+  .donate .sub { font-size: 17px; }
+  .coin { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 24px; }
+  .coin .tok { padding: 5px 12px; border-radius: 999px; background: #26a17b; color: #fff; font-weight: 700; font-size: 14px; letter-spacing: .02em; }
+  .coin .net { color: #a7f3d0; font-size: 15px; }
+  .addr { display: flex; gap: 10px; align-items: center; margin-top: 12px; padding: 10px 10px 10px 16px; border-radius: 14px;
+          background: rgba(0, 0, 0, .35); border: 1px solid var(--line); max-width: 580px; }
+  .addr code { background: none; padding: 0; font-size: 15px; color: var(--text); overflow-wrap: anywhere; flex: 1; }
+  .copy { flex: none; cursor: pointer; padding: 9px 16px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, .18); background: var(--card-2);
+          color: var(--text); font: 600 14px -apple-system, BlinkMacSystemFont, sans-serif; transition: background .15s; }
+  .copy:hover { background: rgba(255, 255, 255, .12); }
+  .copy.done { background: #26a17b; border-color: #26a17b; }
+  .donate .warn { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+  .qrbox { text-align: center; }
+  .qr { display: inline-block; padding: 12px; border-radius: 20px; background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .45); }
+  .qr img { width: 208px; height: 208px; }
+  .qrbox span { display: block; margin-top: 12px; color: var(--muted); font-size: 13px; }
   footer { padding: 56px 0 48px; color: var(--faint); font-size: 14px; }
   footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; }
   footer a { color: var(--muted); }
@@ -161,6 +182,7 @@
     .demo, .grid2, .cols3, .steps, .priv { grid-template-columns: 1fr; }
     .demo { gap: 32px; }
     .steps { gap: 34px; }
+    .donate { grid-template-columns: 1fr; gap: 30px; padding: 30px 22px; }
   }
   @media (max-width: 520px) {
     body { font-size: 16px; }
@@ -171,6 +193,7 @@
     .stat b { font-size: 21px; }
     .btn:not(.small) { width: 100%; justify-content: center; }
     .shot-hero { border-radius: 12px; }
+    .addr code { font-size: 13px; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
@@ -185,6 +208,7 @@
       <a href="#features">Возможности</a>
       <a href="#start">Как начать</a>
       <a href="#faq">Вопросы</a>
+      <a href="#donate">♥ Поддержать</a>
       <a href="https://github.com/sturostov/LakonIQ">GitHub</a>
     </div>
     <a class="btn small" href="https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg">Скачать</a>
@@ -345,10 +369,29 @@
   </div>
 </section>
 
+<section id="donate">
+  <div class="wrap">
+    <div class="donate">
+      <div>
+        <div class="eyebrow">Поддержать проект</div>
+        <h2>LakonIQ бесплатный — и останется таким</h2>
+        <p class="sub">Если он помог на собеседовании, можно поддержать разработку. Донаты идут на новые функции, банк вопросов и подпись Apple Developer — чтобы macOS открывала приложение без предупреждений.</p>
+        <div class="coin"><span class="tok">USDT</span><span class="net">сеть TRON · TRC-20</span></div>
+        <div class="addr"><code id="addr">TJF8X2UAsuxdLJAKFw1KMryoDz5kAkvwPq</code><button class="copy" type="button" data-copy="TJF8X2UAsuxdLJAKFw1KMryoDz5kAkvwPq">Копировать</button></div>
+        <p class="warn">Отправляй только USDT или TRX в сети TRON (TRC-20). Монеты из других сетей потеряются.</p>
+      </div>
+      <div class="qrbox">
+        <div class="qr"><img src="assets/donate-usdt-trc20.svg" width="208" height="208" alt="QR-код адреса USDT в сети TRON"></div>
+        <span>Отсканируй камерой кошелька</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <span>© 2026 LakonIQ contributors · лицензия MIT</span>
-    <span><a href="https://github.com/sturostov/LakonIQ">GitHub</a> · <a href="https://github.com/sturostov/LakonIQ/releases">Все версии</a> · <a href="https://github.com/sturostov/LakonIQ/issues">Сообщить о проблеме</a></span>
+    <span><a href="https://github.com/sturostov/LakonIQ">GitHub</a> · <a href="https://github.com/sturostov/LakonIQ/releases">Все версии</a> · <a href="https://github.com/sturostov/LakonIQ/issues">Сообщить о проблеме</a> · <a href="#donate">♥ Поддержать</a></span>
   </div>
 </footer>
 
@@ -358,6 +401,22 @@
     var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || ua;
     var isMac = /mac/i.test(plat) && !/iphone|ipad|ipod/i.test(ua) && !(navigator.maxTouchPoints > 1);
     if (!isMac) document.documentElement.classList.add("not-mac");
+    document.querySelectorAll("[data-copy]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var text = b.getAttribute("data-copy");
+        function done() {
+          b.textContent = "Скопировано ✓"; b.classList.add("done");
+          setTimeout(function () { b.textContent = "Копировать"; b.classList.remove("done"); }, 2000);
+        }
+        function fallback() {
+          var r = document.createRange(); r.selectNodeContents(document.getElementById("addr"));
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          try { if (document.execCommand("copy")) done(); } catch (e) {}
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+        else fallback();
+      });
+    });
     fetch("https://api.github.com/repos/sturostov/LakonIQ/releases/latest")
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (rel) {

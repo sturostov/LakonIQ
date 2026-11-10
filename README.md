@@ -14,7 +14,7 @@
 [![License: MIT](https://img.shields.io/github/license/sturostov/LakonIQ?style=flat-square&color=22c55e)](LICENSE)
 [![AI: Groq · Gemini · Claude · Ollama](https://img.shields.io/badge/AI-Groq%20%C2%B7%20Gemini%20%C2%B7%20Claude%20%C2%B7%20Ollama-8b5cf6?style=flat-square)](#install)
 
-[**⬇ Скачать для Mac**](https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg) · [Сайт](https://sturostov.github.io/LakonIQ/) · [Возможности](#features) · [Как это работает](#how) · [Вопросы и ответы](#faq)
+[**⬇ Скачать для Mac**](https://github.com/sturostov/LakonIQ/releases/latest/download/LakonIQ.dmg) · [Сайт](https://sturostov.github.io/LakonIQ/) · [Возможности](#features) · [Как это работает](#how) · [Вопросы и ответы](#faq) · [♥ Поддержать](#donate)
 
 <img src="docs/assets/hero.webp" width="100%" alt="LakonIQ поверх видеозвонка: вопрос интервьюера в расшифровке и готовый ответ — что сказать, шпаргалка-таблица и пример кода">
 
@@ -268,6 +268,25 @@ BlackHole остался запасным вариантом в ⋯ → Наст
 Пока только macOS 13+: звук системы и окно поверх всех программ сделаны на нативных функциях macOS.
 </details>
 
+<a id="donate"></a>
+## ❤️ Поддержать проект
+
+LakonIQ бесплатный и с открытым кодом. Если он помог на собеседовании — можно поддержать разработку:
+новые функции, банк вопросов и подпись Apple Developer, чтобы macOS открывала приложение без предупреждений.
+
+<table>
+<tr>
+<td><img src="docs/assets/donate-usdt-trc20.svg" width="150" alt="QR-код адреса USDT в сети TRON"></td>
+<td>
+<b>USDT · сеть TRON (TRC-20)</b>
+<br><br>
+<code>TJF8X2UAsuxdLJAKFw1KMryoDz5kAkvwPq</code>
+<br><br>
+<sub>Отправляй только USDT или TRX в сети TRON — монеты из других сетей потеряются.</sub>
+</td>
+</tr>
+</table>
+
 ## 🛠 Разработка
 
 ```bash
@@ -289,5 +308,5 @@ MIT — см. [LICENSE](LICENSE).
 
 <div align="center">
 <br>
-<sub>Если LakonIQ помог на собеседовании — поставь ⭐, так его найдут другие.</sub>
+<sub>Если LakonIQ помог на собеседовании — поставь ⭐, так его найдут другие, или <a href="#donate">поддержи проект</a>.</sub>
 </div>
